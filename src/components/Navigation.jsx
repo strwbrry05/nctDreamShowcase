@@ -32,18 +32,18 @@ const Navigation = () => {
 
           <div
             className="hidden md:block mt-[0.75em]
-        font-(family-name:--font-text) font-light text-(--color-gray)"
+        font-(family-name:--font-text) font-regular text-(--color-gray)"
           >
             <ul className="flex justify-center place-self-center ">
               <li
                 className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-110 ml-[1em] "
+            hover:text-(--color-white) hover:scale-105 ml-[1em] "
               >
                 Home
               </li>
               <li
                 className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-110 ml-[2em]
+            hover:text-(--color-white) hover:scale-105 ml-[2em]
             
             lg:ml-[4em] xl:ml-[6em]"
               >
@@ -51,7 +51,7 @@ const Navigation = () => {
               </li>
               <li
                 className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-110 ml-[2em] mr-[2em]
+            hover:text-(--color-white) hover:scale-105 ml-[2em] mr-[2em]
             
             lg:ml-[4em] lg:mr-[4em] xl:ml-[6em] xl:mr-[6em]"
               >
@@ -76,7 +76,7 @@ const Navigation = () => {
             <ul className="flex">
               <li
                 className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-110 ml-[2em]
+            hover:text-(--color-white) hover:scale-105 ml-[2em]
             
             lg:ml-[4em] xl:ml-[6em]"
               >
@@ -84,7 +84,7 @@ const Navigation = () => {
               </li>
               <li
                 className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-110 ml-[2em]
+            hover:text-(--color-white) hover:scale-105 ml-[2em]
             
             lg:ml-[4em] xl:ml-[6em]"
               >
@@ -92,7 +92,7 @@ const Navigation = () => {
               </li>
               <li
                 className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-110 ml-[2em] mr-[1em]
+            hover:text-(--color-white) hover:scale-105 ml-[2em] mr-[1em]
             
             lg:ml-[4em] xl:ml-[6em]"
               >
