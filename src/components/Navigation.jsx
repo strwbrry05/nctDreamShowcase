@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { HiMenu } from "react-icons/hi";
-import NavBurger from "./NavBurger";
 
-const Navigation = () => {
+const Navigation = (props) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -12,8 +11,9 @@ const Navigation = () => {
   return (
     <>
       <div
-        className="flex justify-center items-center
-      sticky z-5 bg-(--color-black) h-[75px] shadow-[0_3px_3px_rgba(0,0,0,0.5)]"
+        className={`flex justify-center items-center sticky z-5 h-[75px] 
+      ${props.isDark ? "barDarkMode" : "barLightMode"}
+      ${isActive ? "" : "shadow-[0_3px_3px_rgba(0,0,0,0.5)]"}`}
       >
         <div
           className="flex justify-center md:justify-evenly items-center 
@@ -21,39 +21,51 @@ const Navigation = () => {
         >
           <button className="cursor-pointer md:hidden">
             <HiMenu
-              className={`text-(--color-white) text-[2.5rem] mr-[1em] ${
-                isActive
-                  ? "rotate-90 transition-all duration-300 ease-in"
-                  : "rotate-[-90] transition-all duration-300 ease-in"
-              }`}
+              className={`text-[2.5rem] mr-[1em] 
+                ${props.isDark ? "darkModeText" : "lightModeText"}
+                ${
+                  isActive
+                    ? "rotate-90 transition-all duration-300 ease-in"
+                    : "rotate-[-90] transition-all duration-300 ease-in"
+                }`}
               onClick={handleClick}
             />
           </button>
 
           <div
             className="hidden md:block mt-[0.75em]
-        font-(family-name:--font-text) font-regular text-(--color-gray)"
+        font-(family-name:--font-text)"
           >
             <ul className="flex justify-center place-self-center ">
               <li
-                className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-105 ml-[1em] "
+                className={`navBarListItem ml-[1em]
+                  ${
+                    props.isDark
+                      ? "darkModeNavBarListItem"
+                      : "lightModeNavBarListItem"
+                  }`}
               >
                 Home
               </li>
               <li
-                className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-105 ml-[2em]
+                className={`navBarListItem ${
+                  props.isDark
+                    ? "darkModeNavBarListItem"
+                    : "lightModeNavBarListItem"
+                }
             
-            lg:ml-[4em] xl:ml-[6em]"
+            ml-[2em] lg:ml-[4em] xl:ml-[6em]`}
               >
                 Members
               </li>
               <li
-                className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-105 ml-[2em] mr-[2em]
+                className={`navBarListItem ${
+                  props.isDark
+                    ? "darkModeNavBarListItem"
+                    : "lightModeNavBarListItem"
+                }
             
-            lg:ml-[4em] lg:mr-[4em] xl:ml-[6em] xl:mr-[6em]"
+            ml-[2em] mr-[2em] lg:ml-[4em] lg:mr-[4em] xl:ml-[6em] xl:mr-[6em]`}
               >
                 Discography
               </li>
@@ -61,40 +73,48 @@ const Navigation = () => {
           </div>
 
           <h1
-            className="
-          cursor-pointer text-center mr-[2em] md:mr-[0]
-        text-(--color-white) font-(family-name:--font-title) 
-      font-black text-[2rem] leading-[0.75]"
+            className={`${props.isDark ? "darkModeText" : "lightModeText"}
+          cursor-pointer text-center mr-[2em] md:mr-[0] font-(family-name:--font-title) 
+          font-black text-[2rem] leading-[0.75]`}
           >
             Beat <br /> Box
           </h1>
 
           <div
             className="hidden md:block mt-[0.75em]
-        font-(family-name:--font-text) font-light text-(--color-gray)"
+        font-(family-name:--font-text)"
           >
             <ul className="flex">
               <li
-                className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-105 ml-[2em]
+                className={`navBarListItem ${
+                  props.isDark
+                    ? "darkModeNavBarListItem"
+                    : "lightModeNavBarListItem"
+                }
             
-            lg:ml-[4em] xl:ml-[6em]"
+            ml-[2em] lg:ml-[4em] xl:ml-[6em]`}
               >
                 Photocards
               </li>
               <li
-                className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-105 ml-[2em]
+                className={`navBarListItem ${
+                  props.isDark
+                    ? "darkModeNavBarListItem"
+                    : "lightModeNavBarListItem"
+                } 
             
-            lg:ml-[4em] xl:ml-[6em]"
+            ml-[2em] lg:ml-[4em] xl:ml-[6em]`}
               >
                 Q&A
               </li>
               <li
-                className="mb-[1em] cursor-pointer hover:font-semibold 
-            hover:text-(--color-white) hover:scale-105 ml-[2em] mr-[1em]
+                className={`navBarListItem ${
+                  props.isDark
+                    ? "darkModeNavBarListItem"
+                    : "lightModeNavBarListItem"
+                }
             
-            lg:ml-[4em] xl:ml-[6em]"
+            ml-[2em] mr-[1em] lg:ml-[4em] xl:ml-[6em]`}
               >
                 YouTube
               </li>
@@ -110,28 +130,53 @@ const Navigation = () => {
         ? "translate-y-[0vh] transition transform duration-500 ease-in-out"
         : "translate-y-[-100vh] transition transform duration-500 ease-in"
     }
+    ${props.isDark ? "barDarkMode" : "barLightMode"}
 
     md:hidden z-4 w-full
-    bg-(--color-black) text-(--color-gray) font-(family-name:--font-text)
-    font-light pt-[1.25em] pb-[1.25em]
+    font-(family-name:--font-text)
+    pt-[1.25em] pb-[1.25em]
     flex justify-center flex-col items-center shadow-[0_3px_3px_rgba(0,0,0,0.5)]`}
       >
-        <h2 className="mb-[1em] cursor-pointer hover:font-semibold hover:text-(--color-white) hover:scale-110">
+        <h2
+          className={`navBarListItem ${
+            props.isDark ? "darkModeNavBarListItem" : "lightModeNavBarListItem"
+          }`}
+        >
           Home
         </h2>
-        <h2 className="mb-[1em] cursor-pointer hover:font-semibold hover:text-(--color-white) hover:scale-110">
+        <h2
+          className={`navBarListItem ${
+            props.isDark ? "darkModeNavBarListItem" : "lightModeNavBarListItem"
+          }`}
+        >
           Members
         </h2>
-        <h2 className="mb-[1em] cursor-pointer hover:font-semibold hover:text-(--color-white) hover:scale-110">
+        <h2
+          className={`navBarListItem ${
+            props.isDark ? "darkModeNavBarListItem" : "lightModeNavBarListItem"
+          }`}
+        >
           Discography
         </h2>
-        <h2 className="mb-[1em] cursor-pointer hover:font-semibold hover:text-(--color-white) hover:scale-110">
+        <h2
+          className={`navBarListItem ${
+            props.isDark ? "darkModeNavBarListItem" : "lightModeNavBarListItem"
+          }`}
+        >
           Photocards
         </h2>
-        <h2 className="mb-[1em] cursor-pointer hover:font-semibold hover:text-(--color-white) hover:scale-110">
+        <h2
+          className={`navBarListItem ${
+            props.isDark ? "darkModeNavBarListItem" : "lightModeNavBarListItem"
+          }`}
+        >
           Q&A
         </h2>
-        <h2 className="mb-[1em] cursor-pointer hover:font-semibold hover:text-(--color-white) hover:scale-110">
+        <h2
+          className={`navBarListItem ${
+            props.isDark ? "darkModeNavBarListItem" : "lightModeNavBarListItem"
+          }`}
+        >
           YouTube
         </h2>
       </div>

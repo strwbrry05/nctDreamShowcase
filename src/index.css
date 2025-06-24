@@ -13,6 +13,7 @@
   --color-black: #010D14;
   --color-white: #FFFFFF;
   --color-gray: #CCCCCC;
+  --color-dark-gray: #636363;
   --color-red: #A43921;
 
   --color-light-blue: #056FBB;
@@ -20,6 +21,44 @@
   --color-dark-blue: #001A2E;
 
   --color-yellow: #FFC547;
+}
 
 
+/*################
+  NAVIGATION
+###################*/
+.barDarkMode {
+  background: var(--color-white);
+}
+.barLightMode {
+  background-color: var(--color-black);
+}
+
+.darkModeText {
+  color: var(--color-black);
+}
+.lightModeText {
+  color: var(--color-white);
+}
+
+.navBarListItem {
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+.navBarListItem:hover {
+  font-weight: 600;
+  scale: 1.05;
+}
+
+.darkModeNavBarListItem {
+  color: var(--color-dark-gray);
+}
+.darkModeNavBarListItem:hover {
+  color: var(--color-black);
+}
+.lightModeNavBarListItem {
+  color: var(--color-gray);
+}
+.lightModeNavBarListItem:hover {
+  color: var(--color-white);
 }
