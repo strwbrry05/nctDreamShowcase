@@ -62,3 +62,15 @@
 .lightModeNavBarListItem:hover {
   color: var(--color-white);
 }
+
+
+
+/*################
+  FOOTER
+###################*/
+.footer_darkMode {
+  background: var(--color-white);
+}
+.footer_lightMode {
+  background: var(--color-black);
+}

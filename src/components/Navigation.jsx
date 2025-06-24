@@ -11,7 +11,7 @@ const Navigation = (props) => {
   return (
     <>
       <div
-        className={`flex justify-center items-center sticky z-5 h-[75px] 
+        className={`flex justify-center items-center relative w-full z-5 h-[75px] 
       ${props.isDark ? "barDarkMode" : "barLightMode"}
       ${isActive ? "" : "shadow-[0_3px_3px_rgba(0,0,0,0.5)]"}`}
       >
@@ -132,7 +132,7 @@ const Navigation = (props) => {
     }
     ${props.isDark ? "barDarkMode" : "barLightMode"}
 
-    md:hidden z-4 w-full
+    md:hidden absolute w-full z-4
     font-(family-name:--font-text)
     pt-[1.25em] pb-[1.25em]
     flex justify-center flex-col items-center shadow-[0_3px_3px_rgba(0,0,0,0.5)]`}
