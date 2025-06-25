@@ -6,6 +6,7 @@ import { WiDaySunny } from "react-icons/wi";
 import { MdOutlineNightlight } from "react-icons/md";
 import { useState } from "react";
 import QA from "./components/QA";
+import Member from "./components/Member";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -52,6 +53,10 @@ function App() {
           />
         </div>
       </div>
+
+      <Member />
+      <Member />
+      <Member />
 
       <div className={`bg-(--color-red)`}>
         <QA isDark={isDark} />

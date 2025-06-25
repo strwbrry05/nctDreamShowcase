@@ -70,6 +70,26 @@
 /*################
   Q&A
 ###################*/
+.member_mobileTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 600px solid var(--color-red);
+  border-left: 470px solid transparent;
+  border-right: 0px solid transparent;
+}
+
+.member_mobileTopLeftTriangle {
+  width: 0;
+  height: 0;
+  border-top: 600px solid var(--color-red);
+  border-left: 0px solid transparent;
+  border-right: 470px solid transparent;
+
+}
+
+/*################
+  Q&A
+###################*/
 .qa_symbol {
   margin-left: 1.5em;
   font-size: 2rem;
