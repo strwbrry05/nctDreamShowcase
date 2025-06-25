@@ -49,7 +49,7 @@ const QA = (props) => {
           <img
             src={lm_IMG}
             alt="full group nct dream"
-            className="w-[500px] h-[700px] object-cover"
+            className="w-[500px] h-[700px] object-cover md:ml-[1em]"
           />
         )}
       </div>
