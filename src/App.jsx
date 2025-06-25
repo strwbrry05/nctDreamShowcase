@@ -5,6 +5,7 @@ import "./index.css";
 import { WiDaySunny } from "react-icons/wi";
 import { MdOutlineNightlight } from "react-icons/md";
 import { useState } from "react";
+import QA from "./components/QA";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -50,6 +51,10 @@ function App() {
             onClick={toggleDark}
           />
         </div>
+      </div>
+
+      <div className={`bg-(--color-red)`}>
+        <QA isDark={isDark} />
       </div>
 
       <Footer isDark={isDark} />

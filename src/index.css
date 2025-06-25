@@ -15,6 +15,7 @@
   --color-gray: #CCCCCC;
   --color-dark-gray: #636363;
   --color-red: #A43921;
+  --color-dark-red: #872008;
 
   --color-light-blue: #056FBB;
   --color-blue: #0B688E;
@@ -63,6 +64,18 @@
   color: var(--color-white);
 }
 
+/*################
+  Q&A
+###################*/
+.qa_symbol {
+  margin-left: 1.5em;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.qa_symbol:hover {
+  scale: 1.35;
+  cursor: pointer;
+}
 
 
 /*################
