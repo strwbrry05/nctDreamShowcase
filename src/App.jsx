@@ -57,7 +57,7 @@ function App() {
         <QA isDark={isDark} />
       </div>
 
-      <Footer isDark={isDark} />
+      <Footer />
     </>
   );
 }

@@ -29,17 +29,20 @@
   NAVIGATION
 ###################*/
 .barDarkMode {
-  background: var(--color-white);
+  background: var(--color-blue);
 }
 .barLightMode {
-  background-color: var(--color-black);
+  background-color: var(--color-white);
+}
+.barScrollMode {
+  color: var(--color-white);
 }
 
 .darkModeText {
-  color: var(--color-black);
+  color: var(--color-white);
 }
 .lightModeText {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .navBarListItem {
@@ -52,16 +55,16 @@
 }
 
 .darkModeNavBarListItem {
-  color: var(--color-dark-gray);
-}
-.darkModeNavBarListItem:hover {
-  color: var(--color-black);
-}
-.lightModeNavBarListItem {
   color: var(--color-gray);
 }
-.lightModeNavBarListItem:hover {
+.darkModeNavBarListItem:hover {
   color: var(--color-white);
+}
+.lightModeNavBarListItem {
+  color: var(--color-dark-gray);
+}
+.lightModeNavBarListItem:hover {
+  color: var(--color-black);
 }
 
 /*################
