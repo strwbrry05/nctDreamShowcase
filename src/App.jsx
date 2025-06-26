@@ -4,12 +4,14 @@ import Footer from "./components/Footer";
 import "./index.css";
 import { WiDaySunny } from "react-icons/wi";
 import { MdOutlineNightlight } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import QA from "./components/QA";
 import Member from "./components/Member";
 
 import lm_renjunFull from "./assets/images/lightMode/lm_renjunFull.png";
 import dm_renjunFull from "./assets/images/darkMode/dm_renjunFull.png";
+import dm_jenoFull from "./assets/images/darkMode/dm_jenoFull.png";
+
 import lm_haechanFull from "./assets/images/lightMode/lm_haechanFull.png";
 import dm_haechanFull from "./assets/images/darkMode/dm_haechanFull.png";
 import lm_chenleFull from "./assets/images/lightMode/lm_chenleFull.png";
@@ -25,6 +27,20 @@ function App() {
   const toggleLight = () => {
     setIsDark(false);
   };
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const resize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, [windowWidth]);
 
   return (
     <>
@@ -65,6 +81,7 @@ function App() {
       >
         <Member
           isDark={isDark}
+          windowWidth={windowWidth}
           color={isDark ? "text-(--color-red)" : "text-(--color-red)"}
           scrollColor={isDark ? "bg-(--color-member-dark)" : "bg-(--color-red)"}
           name={"renjun"}
@@ -75,8 +92,70 @@ function App() {
           mobileW={isDark ? "w-[300px]" : "w-[350px]"}
           fullW={isDark ? "w-[380px]" : "w-[500px]"}
           mobileT={"member_mobileRedTopRightTriangle"}
-          desktopT={"member_desktopRedTopRightTriangle"}
-          fullT={"member_fullRedTopRightTriangle"}
+          triangleStyles={
+            windowWidth >= 1280
+              ? "member_fullRedTopRightTriangle XLrightTriangleStyles"
+              : "member_desktopRedTopRightTriangle rightTriangleStyles"
+          }
+          nameStyles={
+            windowWidth >= 1280 ? "XLrightNameStyles" : "rightNameStyles"
+          }
+          imgStyles={
+            windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
+          }
+          bioStyles={
+            windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
+          }
+          blurbStyles={
+            windowWidth >= 1280 ? "XLrightBlurbStyles" : "rightBlurbStyles"
+          }
+          scrollStyles={
+            windowWidth >= 1280 ? "XLrightScrollStyles" : "rightScrollStyles"
+          }
+        />
+      </div>
+
+      {/* JENO */}
+      <div
+        className={`${
+          isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
+        }`}
+      >
+        <Member
+          isDark={isDark}
+          windowWidth={windowWidth}
+          color={isDark ? "text-(--color-dark-red)" : "text-(--color-blue)"}
+          scrollColor={
+            isDark ? "bg-(--color-member-dark)" : "bg-(--color-blue)"
+          }
+          name={"jeno"}
+          birthday={"March 23 2000"}
+          zodiac={"Aries"}
+          blood={"O"}
+          IMG={isDark ? dm_jenoFull : lm_renjunFull}
+          mobileW={isDark ? "w-[300px]" : "w-[350px]"}
+          fullW={isDark ? "w-[380px]" : "w-[500px]"}
+          mobileT={"member_mobileRedTopRightTriangle"}
+          triangleStyles={
+            windowWidth >= 1280
+              ? "member_fullRedTopRightTriangle XLrightTriangleStyles"
+              : "member_desktopRedTopRightTriangle rightTriangleStyles"
+          }
+          nameStyles={
+            windowWidth >= 1280 ? "XLrightNameStyles" : "rightNameStyles"
+          }
+          imgStyles={
+            windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
+          }
+          bioStyles={
+            windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
+          }
+          blurbStyles={
+            windowWidth >= 1280 ? "XLrightBlurbStyles" : "rightBlurbStyles"
+          }
+          scrollStyles={
+            windowWidth >= 1280 ? "XLrightScrollStyles" : "rightScrollStyles"
+          }
         />
       </div>
 
@@ -98,8 +177,26 @@ function App() {
           mobileW={isDark ? "w-[300px]" : "w-[315px]"}
           fullW={isDark ? "w-[380px]" : "w-[400px]"}
           mobileT={"member_mobileYellowBottomRightTriangle"}
-          desktopT={"member_desktopYellowTopRightTriangle"}
-          fullT={"member_fullYellowTopRightTriangle"}
+          triangleStyles={
+            windowWidth >= 1280
+              ? "member_fullYellowTopRightTriangle XLrightTriangleStyles"
+              : "member_desktopYellowTopRightTriangle rightTriangleStyles"
+          }
+          nameStyles={
+            windowWidth >= 1280 ? "XLrightNameStyles" : "rightNameStyles"
+          }
+          imgStyles={
+            windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
+          }
+          bioStyles={
+            windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
+          }
+          blurbStyles={
+            windowWidth >= 1280 ? "XLrightBlurbStyles" : "rightBlurbStyles"
+          }
+          scrollStyles={
+            windowWidth >= 1280 ? "XLrightScrollStyles" : "rightScrollStyles"
+          }
         />
       </div>
 
@@ -124,18 +221,42 @@ function App() {
           fullW={isDark ? "w-[380px]" : "w-[370px]"}
           mobileT={
             isDark
-              ? "member_mobileDRedTopRightTriangle"
+              ? "member_mobileDRedTopRightTriangle "
               : "member_mobileBlueTopRightTriangle"
           }
           desktopT={
             isDark
-              ? "member_desktopDRedTopRightTriangle"
-              : "member_desktopBlueTopRightTriangle"
+              ? "member_desktopDRedTopRightTriangle rightTriangleStyles"
+              : "member_desktopBlueTopRightTriangle rightTriangleStyles"
           }
           fullT={
             isDark
-              ? "member_fullDRedTopRightTriangle"
-              : "member_fullBlueTopRightTriangle"
+              ? "member_fullDRedTopRightTriangle XLrightTriangleStyles"
+              : "member_fullBlueTopRightTriangle XLrightTriangleStyles"
+          }
+          triangleStyles={
+            windowWidth >= 1280
+              ? isDark
+                ? "member_fullDRedTopRightTriangle XLrightTriangleStyles"
+                : "member_fullBlueTopRightTriangle XLrightTriangleStyles"
+              : !isDark
+              ? "member_desktopBlueTopRightTriangle rightTriangleStyles"
+              : "member_desktopDRedTopRightTriangle rightTriangleStyles"
+          }
+          nameStyles={
+            windowWidth >= 1280 ? "XLrightNameStyles" : "rightNameStyles"
+          }
+          imgStyles={
+            windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
+          }
+          bioStyles={
+            windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
+          }
+          blurbStyles={
+            windowWidth >= 1280 ? "XLrightBlurbStyles" : "rightBlurbStyles"
+          }
+          scrollStyles={
+            windowWidth >= 1280 ? "XLrightScrollStyles" : "rightScrollStyles"
           }
         />
       </div>

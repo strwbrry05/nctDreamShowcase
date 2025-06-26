@@ -1,20 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Member = (props) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const resize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", resize);
-
-    return () => {
-      window.removeEventListener("resize", resize);
-    };
-  }, [windowWidth]);
-
   return (
     <div className="pt-[1.25em] pb-[1.5em]">
       <div
@@ -68,39 +54,29 @@ const Member = (props) => {
       <div className="hidden lg:block lg:w-[950px] xl:w-[1200px] m-auto">
         <div className="grid grid-cols-12 grid-rows-12 xl:grid-rows-10">
           <h2
-            className={`z-2 col-start-1 col-end-7 row-start-1 row-end-3 ml-[0.25em]
+            className={`z-2 
           uppercase ${props.color} font-(family-name:--font-solid) 
           text-[6.5rem] text-shadow-[4px_6px_0px_rgb(0,0,0,0.9)] tracking-wider
-          
-          xl:text-[7rem] xl:tracking-widest xl:ml-[0.45em]`}
+          ${props.nameStyles}`}
           >
             {props.name}
           </h2>
           <img
             src={props.IMG}
             alt=""
-            className={`z-2 col-start-7 col-end-13 row-start-2 row-end-10
-            justify-self-start self-center xl:justify-self-center
-            ${props.fullW}
-            
-            xl:row-start-1 xl:row-end-9`}
+            className={`z-2 ${props.imgStyles}
+            ${props.fullW}`}
           />
           <div
-            className="z-2 col-start-1 col-end-7 row-start-3 row-end-4 self-center mr-[8em]
-        flex justify-evenly font-(family-name:--font-text) font-bold
-        
-        xl:row-start-2 xl:mr-[7em]"
+            className={`z-2 ${props.bioStyles}
+            font-(family-name:--font-text) font-bold`}
           >
             <p>{props.birthday}</p>
             <p>{props.zodiac}</p> <p>{props.blood}</p>
           </div>
           <p
-            className="z-2 col-start-1 col-end-7 row-start-4 row-end-10 
-          font-(family-name:--font-text) text-[1.15rem] w-[90%] leading-9
-          justify-self-center self-center
-          
-          xl:w-[80%] xl:self-center xl:text-[1.05rem]
-          xl:row-start-3 xl:row-end-9 xl:col-end-8 xl:mb-[4em]"
+            className={`z-2 ${props.blurbStyles} 
+          font-(family-name:--font-text) leading-9`}
           >
             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
             faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
@@ -113,18 +89,13 @@ const Member = (props) => {
             tempor.
           </p>
           <div
-            className={`z-1 ${
-              windowWidth >= 1280 ? props.fullT : props.desktopT
-            }
-          col-start-6 col-end-13 row-start-1 row-end-13
-          xl:row-end-11`}
+            className={`z-1 ${props.triangleStyles}
+          
+          `}
           ></div>
           <div
-            className={`z-2 col-start-1 col-end-11 row-start-10 row-end-13
-          w-[95%] h-[200px] m-auto opacity-[70%]
-          ${props.scrollColor}
-          
-          xl:row-start-8 xl:row-end-11 xl:h-[225px] xl:w-[90%]`}
+            className={`z-2 ${props.scrollStyles} m-auto opacity-[70%]
+          ${props.scrollColor}`}
           ></div>
         </div>
       </div>
