@@ -22,6 +22,9 @@
   --color-dark-blue: #001A2E;
 
   --color-yellow: #FFC547;
+
+  --color-member-light: #91D1EC;
+  --color-member-dark: #0B688E;
 }
 
 
@@ -70,11 +73,92 @@
 /*################
   Q&A
 ###################*/
-.member_mobileTopRightTriangle {
+.member_mobileRedTopRightTriangle {
   width: 0;
   height: 0;
   border-top: 600px solid var(--color-red);
   border-left: 470px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_desktopRedTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 900px solid var(--color-red);
+  border-left: 555px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_fullRedTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 840px solid var(--color-red);
+  border-left: 700px solid transparent;
+  border-right: 0px solid transparent;
+}
+
+
+.member_mobileYellowBottomRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 600px solid var(--color-yellow);
+  border-left: 470px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_desktopYellowTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-bottom: 918px solid var(--color-yellow);
+  border-left: 555px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_fullYellowTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-bottom: 827px solid var(--color-yellow);
+  border-left: 700px solid transparent;
+  border-right: 0px solid transparent;
+}
+
+
+.member_mobileDRedTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 600px solid var(--color-dark-red);
+  border-left: 470px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_desktopDRedTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 900px solid var(--color-dark-red);
+  border-left: 555px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_fullDRedTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 840px solid var(--color-dark-red);
+  border-left: 700px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_mobileBlueTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 600px solid var(--color-blue);
+  border-left: 470px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_desktopBlueTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 900px solid var(--color-blue);
+  border-left: 555px solid transparent;
+  border-right: 0px solid transparent;
+}
+.member_fullBlueTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 840px solid var(--color-blue);
+  border-left: 700px solid transparent;
   border-right: 0px solid transparent;
 }
 
@@ -85,22 +169,6 @@
   border-left: 0px solid transparent;
   border-right: 470px solid transparent;
 
-}
-
-.member_desktopTopRightTriangle {
-  width: 0;
-  height: 0;
-  border-top: 900px solid var(--color-red);
-  border-left: 555px solid transparent;
-  border-right: 0px solid transparent;
-}
-
-.member_fullTopRightTriangle {
-  width: 0;
-  height: 0;
-  border-top: 840px solid var(--color-red);
-  border-left: 700px solid transparent;
-  border-right: 0px solid transparent;
 }
 
 /*################
