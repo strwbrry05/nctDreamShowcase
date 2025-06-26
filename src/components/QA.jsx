@@ -13,13 +13,13 @@ const QA = (props) => {
     {
       question: "How many albums have they released since debut?",
       answer: "lorem",
-      opened: true,
+      opened: false,
     },
+    { question: "When did they debut?", answer: "lorem", opened: false },
     { question: "When did they debut?", answer: "lorem", opened: true },
-    { question: "When did they debut?", answer: "lorem", opened: true },
-    { question: "When did they debut?", answer: "lorem", opened: true },
-    { question: "When did they debut?", answer: "lorem", opened: true },
-    { question: "When did they debut?", answer: "lorem", opened: true },
+    { question: "When did they debut?", answer: "lorem", opened: false },
+    { question: "When did they debut?", answer: "lorem", opened: false },
+    { question: "When did they debut?", answer: "lorem", opened: false },
   ]);
 
   const toggleOpen = (index) => {
