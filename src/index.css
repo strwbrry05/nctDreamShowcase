@@ -87,6 +87,22 @@
 
 }
 
+.member_desktopTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 900px solid var(--color-red);
+  border-left: 555px solid transparent;
+  border-right: 0px solid transparent;
+}
+
+.member_fullTopRightTriangle {
+  width: 0;
+  height: 0;
+  border-top: 840px solid var(--color-red);
+  border-left: 700px solid transparent;
+  border-right: 0px solid transparent;
+}
+
 /*################
   Q&A
 ###################*/
