@@ -54,9 +54,15 @@ function App() {
         </div>
       </div>
 
-      <Member />
-      <Member />
-      <Member />
+      <div
+        className={`${
+          isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
+        }`}
+      >
+        <Member isDark={isDark} />
+        <Member />
+        <Member />
+      </div>
 
       <div className={`bg-(--color-red)`}>
         <QA isDark={isDark} />

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import lm_renjunFull from "../assets/images/lightMode/lm_renjunFull.png";
+import dm_renjunFull from "../assets/images/darkMode/dm_renjunFull.png";
 
-const Member = () => {
+const Member = (props) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -31,10 +32,11 @@ const Member = () => {
           Renjun
         </h2>
         <img
-          src={lm_renjunFull}
+          src={props.isDark ? dm_renjunFull : lm_renjunFull}
           alt="light mode renjun"
-          className="z-2 col-start-1 col-end-7 row-start-2 row-end-6
-          w-[350px] self-center justify-self-center"
+          className={`z-2 col-start-1 col-end-7 row-start-2 row-end-6
+          self-center justify-self-center
+          ${props.isDark ? "w-[300px]" : "w-[350px]"}`}
         />
         <div
           className="col-start-1 col-end-7 row-start-6 row-end-7 self-start mt-[1em]
@@ -75,12 +77,13 @@ const Member = () => {
             renjun
           </h2>
           <img
-            src={lm_renjunFull}
+            src={props.isDark ? dm_renjunFull : lm_renjunFull}
             alt=""
-            className="z-2 col-start-7 col-end-13 row-start-2 row-end-10
-            w-[500px] justify-self-start self-center xl:justify-self-center
+            className={`z-2 col-start-7 col-end-13 row-start-2 row-end-10
+            justify-self-start self-center xl:justify-self-center
+            ${props.isDark ? "w-[380px]" : "w-[500px]"}
             
-            xl:row-start-1 xl:row-end-9"
+            xl:row-start-1 xl:row-end-9`}
           />
           <div
             className="z-2 col-start-1 col-end-7 row-start-3 row-end-4 self-center mr-[5em]
