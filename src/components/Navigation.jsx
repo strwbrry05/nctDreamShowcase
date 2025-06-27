@@ -104,7 +104,9 @@ const Navigation = (props) => {
           cursor-pointer text-center mr-[2em] md:mr-[0] font-(family-name:--font-title) 
           font-black text-[2rem] leading-[0.75]`}
           >
-            Beat <br /> Box
+            NCT
+            <br />
+            DREAM
           </h1>
 
           <div
