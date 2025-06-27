@@ -94,7 +94,7 @@ function App() {
           blood={"O"}
           IMG={isDark ? dm_renjunFull : lm_renjunFull}
           mobileW={isDark ? "w-[300px]" : "w-[350px]"}
-          fullW={isDark ? "w-[380px]" : "w-[500px]"}
+          fullW={isDark ? "w-[340px]" : "w-[400px]"}
           mobileT={"member_mobileRedTopRightTriangle"}
           triangleStyles={
             windowWidth >= 1280
@@ -138,7 +138,7 @@ function App() {
           blood={"O"}
           IMG={isDark ? dm_jenoFull : lm_jenoFull}
           mobileW={isDark ? "w-[300px]" : "w-[350px]"}
-          fullW={isDark ? "w-[380px]" : "w-[430px]"}
+          fullW={isDark ? "w-[340px]" : "w-[370px]"}
           mobileT={
             isDark
               ? "member_mobileDRedTopRightTriangle"
@@ -183,7 +183,7 @@ function App() {
           blood={"AB"}
           IMG={isDark ? dm_haechanFull : lm_haechanFull}
           mobileW={isDark ? "w-[300px]" : "w-[315px]"}
-          fullW={isDark ? "w-[380px]" : "w-[400px]"}
+          fullW={isDark ? "w-[340px]" : "w-[370px]"}
           mobileT={"member_mobileYellowTopRightTriangle"}
           triangleStyles={
             windowWidth >= 1280
@@ -225,7 +225,7 @@ function App() {
           blood={"O"}
           IMG={isDark ? dm_jaeminFull : lm_jaeminFull}
           mobileW={isDark ? "w-[300px]" : "w-[320px]"}
-          fullW={isDark ? "w-[380px]" : "w-[375px]"}
+          fullW={isDark ? "w-[340px]" : "w-[320px]"}
           mobileT={"member_mobileRedTopRightTriangle"}
           triangleStyles={
             windowWidth >= 1280
@@ -264,7 +264,7 @@ function App() {
           blood={"A"}
           IMG={isDark ? dm_chenleFull : lm_chenleFull}
           mobileW={isDark ? "w-[300px]" : "w-[265px]"}
-          fullW={isDark ? "w-[380px]" : "w-[370px]"}
+          fullW={isDark ? "w-[340px]" : "w-[320px]"}
           mobileT={
             isDark
               ? "member_mobileDRedTopRightTriangle "
@@ -286,7 +286,9 @@ function App() {
             windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
           }
           bioStyles={
-            windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
+            windowWidth >= 1280
+              ? "XLrightBioStyles ml-[0.7em]"
+              : "rightBioStyles"
           }
           blurbStyles={
             windowWidth >= 1280 ? "XLrightBlurbStyles" : "rightBlurbStyles"
@@ -313,7 +315,7 @@ function App() {
           blood={"O"}
           IMG={isDark ? dm_jisungFull : lm_jisungFull}
           mobileW={isDark ? "w-[300px]" : "w-[350px]"}
-          fullW={isDark ? "w-[380px]" : "w-[440px]"}
+          fullW={isDark ? "w-[340px]" : "w-[350px]"}
           mobileT={"member_mobileYellowTopRightTriangle"}
           triangleStyles={
             windowWidth >= 1280
@@ -324,7 +326,9 @@ function App() {
             windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
           }
           imgStyles={windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"}
-          bioStyles={windowWidth >= 1280 ? "XLleftBioStyles" : "leftBioStyles"}
+          bioStyles={
+            windowWidth >= 1280 ? "XLleftBioStyles ml-[1em]" : "leftBioStyles"
+          }
           blurbStyles={
             windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
           }

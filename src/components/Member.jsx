@@ -52,7 +52,7 @@ const Member = (props) => {
       </div>
 
       <div className="hidden lg:block lg:w-[950px] xl:w-[1200px] m-auto">
-        <div className="grid grid-cols-12 grid-rows-12 xl:grid-rows-10">
+        <div className="grid grid-cols-12 grid-rows-12 xl:grid-rows-9">
           <h2
             className={`z-2 
           uppercase ${props.color} font-(family-name:--font-solid) 
@@ -76,7 +76,7 @@ const Member = (props) => {
           </div>
           <p
             className={`z-2 ${props.blurbStyles} 
-          font-(family-name:--font-text) leading-9`}
+          font-(family-name:--font-text) leading-8`}
           >
             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
             faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
