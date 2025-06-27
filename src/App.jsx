@@ -288,7 +288,7 @@ function App() {
           bioStyles={
             windowWidth >= 1280
               ? "XLrightBioStyles ml-[0.7em]"
-              : "rightBioStyles"
+              : "rightBioStyles ml-[0.7em]"
           }
           blurbStyles={
             windowWidth >= 1280 ? "XLrightBlurbStyles" : "rightBlurbStyles"
