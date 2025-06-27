@@ -10,12 +10,16 @@ import Member from "./components/Member";
 
 import lm_renjunFull from "./assets/images/lightMode/lm_renjunFull.png";
 import dm_renjunFull from "./assets/images/darkMode/dm_renjunFull.png";
+import lm_jenoFull from "./assets/images/lightMode/lm_jenoFull.png";
 import dm_jenoFull from "./assets/images/darkMode/dm_jenoFull.png";
-
 import lm_haechanFull from "./assets/images/lightMode/lm_haechanFull.png";
 import dm_haechanFull from "./assets/images/darkMode/dm_haechanFull.png";
+import lm_jaeminFull from "./assets/images/lightMode/lm_jaeminFull.png";
+import dm_jaeminFull from "./assets/images/darkMode/dm_jaeminFull.png";
 import lm_chenleFull from "./assets/images/lightMode/lm_chenleFull.png";
 import dm_chenleFull from "./assets/images/darkMode/dm_chenleFull.png";
+import lm_jisungFull from "./assets/images/lightMode/lm_jisungFull.png";
+import dm_jisungFull from "./assets/images/darkMode/dm_jisungFull.png";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -129,32 +133,36 @@ function App() {
             isDark ? "bg-(--color-member-dark)" : "bg-(--color-blue)"
           }
           name={"jeno"}
-          birthday={"March 23 2000"}
-          zodiac={"Aries"}
+          birthday={"April 23 2000"}
+          zodiac={"Taurus"}
           blood={"O"}
-          IMG={isDark ? dm_jenoFull : lm_renjunFull}
+          IMG={isDark ? dm_jenoFull : lm_jenoFull}
           mobileW={isDark ? "w-[300px]" : "w-[350px]"}
-          fullW={isDark ? "w-[380px]" : "w-[500px]"}
-          mobileT={"member_mobileRedTopRightTriangle"}
+          fullW={isDark ? "w-[380px]" : "w-[430px]"}
+          mobileT={
+            isDark
+              ? "member_mobileDRedTopRightTriangle"
+              : "member_mobileBlueTopRightTriangle"
+          }
           triangleStyles={
             windowWidth >= 1280
-              ? "member_fullRedTopRightTriangle XLrightTriangleStyles"
-              : "member_desktopRedTopRightTriangle rightTriangleStyles"
+              ? isDark
+                ? "member_fullDredBottomLeftTriangle XLleftTriangleStyles"
+                : "member_fullBlueBottomLeftTriangle XLleftTriangleStyles"
+              : !isDark
+              ? "member_desktopBlueBottomLeftTriangle leftTriangleStyles"
+              : "member_desktopDredBottomLeftTriangle leftTriangleStyles"
           }
           nameStyles={
-            windowWidth >= 1280 ? "XLrightNameStyles" : "rightNameStyles"
+            windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
           }
-          imgStyles={
-            windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
-          }
-          bioStyles={
-            windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
-          }
+          imgStyles={windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"}
+          bioStyles={windowWidth >= 1280 ? "XLleftBioStyles" : "leftBioStyles"}
           blurbStyles={
-            windowWidth >= 1280 ? "XLrightBlurbStyles" : "rightBlurbStyles"
+            windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
           }
           scrollStyles={
-            windowWidth >= 1280 ? "XLrightScrollStyles" : "rightScrollStyles"
+            windowWidth >= 1280 ? "XLleftScrollStyles" : "leftScrollStyles"
           }
         />
       </div>
@@ -176,7 +184,7 @@ function App() {
           IMG={isDark ? dm_haechanFull : lm_haechanFull}
           mobileW={isDark ? "w-[300px]" : "w-[315px]"}
           fullW={isDark ? "w-[380px]" : "w-[400px]"}
-          mobileT={"member_mobileYellowBottomRightTriangle"}
+          mobileT={"member_mobileYellowTopRightTriangle"}
           triangleStyles={
             windowWidth >= 1280
               ? "member_fullYellowTopRightTriangle XLrightTriangleStyles"
@@ -196,6 +204,44 @@ function App() {
           }
           scrollStyles={
             windowWidth >= 1280 ? "XLrightScrollStyles" : "rightScrollStyles"
+          }
+        />
+      </div>
+
+      {/* JAEMIN */}
+      <div
+        className={`${
+          isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
+        }`}
+      >
+        <Member
+          isDark={isDark}
+          windowWidth={windowWidth}
+          color={isDark ? "text-(--color-red)" : "text-(--color-red)"}
+          scrollColor={isDark ? "bg-(--color-member-dark)" : "bg-(--color-red)"}
+          name={"jaemin"}
+          birthday={"August 13 2000"}
+          zodiac={"Leo"}
+          blood={"O"}
+          IMG={isDark ? dm_jaeminFull : lm_jaeminFull}
+          mobileW={isDark ? "w-[300px]" : "w-[320px]"}
+          fullW={isDark ? "w-[380px]" : "w-[375px]"}
+          mobileT={"member_mobileRedTopRightTriangle"}
+          triangleStyles={
+            windowWidth >= 1280
+              ? "member_fullRedBottomLeftTriangle XLleftTriangleStyles"
+              : "member_desktopRedBottomLeftTriangle leftTriangleStyles"
+          }
+          nameStyles={
+            windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
+          }
+          imgStyles={windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"}
+          bioStyles={windowWidth >= 1280 ? "XLleftBioStyles" : "leftBioStyles"}
+          blurbStyles={
+            windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
+          }
+          scrollStyles={
+            windowWidth >= 1280 ? "XLleftScrollStyles" : "leftScrollStyles"
           }
         />
       </div>
@@ -224,16 +270,6 @@ function App() {
               ? "member_mobileDRedTopRightTriangle "
               : "member_mobileBlueTopRightTriangle"
           }
-          desktopT={
-            isDark
-              ? "member_desktopDRedTopRightTriangle rightTriangleStyles"
-              : "member_desktopBlueTopRightTriangle rightTriangleStyles"
-          }
-          fullT={
-            isDark
-              ? "member_fullDRedTopRightTriangle XLrightTriangleStyles"
-              : "member_fullBlueTopRightTriangle XLrightTriangleStyles"
-          }
           triangleStyles={
             windowWidth >= 1280
               ? isDark
@@ -257,6 +293,43 @@ function App() {
           }
           scrollStyles={
             windowWidth >= 1280 ? "XLrightScrollStyles" : "rightScrollStyles"
+          }
+        />
+      </div>
+
+      {/* JISUNG */}
+      <div
+        className={`${isDark ? "bg-(--color-blue) text-(--color-white)" : ""}`}
+      >
+        <Member
+          isDark={isDark}
+          color={isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"}
+          scrollColor={
+            isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
+          }
+          name={"jisung"}
+          birthday={"February 05 2002"}
+          zodiac={"Aquarius"}
+          blood={"O"}
+          IMG={isDark ? dm_jisungFull : lm_jisungFull}
+          mobileW={isDark ? "w-[300px]" : "w-[350px]"}
+          fullW={isDark ? "w-[380px]" : "w-[440px]"}
+          mobileT={"member_mobileYellowTopRightTriangle"}
+          triangleStyles={
+            windowWidth >= 1280
+              ? "member_fullYellowBottomLeftTriangle XLleftTriangleStyles"
+              : "member_desktopYellowBottomLeftTriangle leftTriangleStyles"
+          }
+          nameStyles={
+            windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
+          }
+          imgStyles={windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"}
+          bioStyles={windowWidth >= 1280 ? "XLleftBioStyles" : "leftBioStyles"}
+          blurbStyles={
+            windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
+          }
+          scrollStyles={
+            windowWidth >= 1280 ? "XLleftScrollStyles" : "leftScrollStyles"
           }
         />
       </div>

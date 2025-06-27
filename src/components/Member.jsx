@@ -56,7 +56,7 @@ const Member = (props) => {
           <h2
             className={`z-2 
           uppercase ${props.color} font-(family-name:--font-solid) 
-          text-[6.5rem] text-shadow-[4px_6px_0px_rgb(0,0,0,0.9)] tracking-wider
+          text-[5.5rem] text-shadow-[4px_6px_0px_rgb(0,0,0,0.9)] tracking-wider
           ${props.nameStyles}`}
           >
             {props.name}
