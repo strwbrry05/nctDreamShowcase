@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import QA from "./components/QA";
 import Member from "./components/Member";
 
+import lm_markFull from "./assets/images/lightMode/lm_markFull.png";
+import dm_markFull from "./assets/images/darkMode/dm_markFull.png";
 import lm_renjunFull from "./assets/images/lightMode/lm_renjunFull.png";
 import dm_renjunFull from "./assets/images/darkMode/dm_renjunFull.png";
 import lm_jenoFull from "./assets/images/lightMode/lm_jenoFull.png";
@@ -75,6 +77,45 @@ function App() {
             onClick={toggleDark}
           />
         </div>
+      </div>
+
+      {/* MARK */}
+      <div
+        className={`${isDark ? "bg-(--color-blue) text-(--color-white)" : ""}`}
+      >
+        <Member
+          isDark={isDark}
+          color={isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"}
+          scrollColor={
+            isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
+          }
+          name={"mark"}
+          birthday={"August 02 1999"}
+          zodiac={"Aquarius"}
+          blood={"A"}
+          IMG={isDark ? dm_markFull : lm_markFull}
+          mobileW={isDark ? "w-[300px]" : "w-[270px]"}
+          fullW={isDark ? "w-[340px]" : "w-[300px]"}
+          mobileT={"member_mobileYellowTopRightTriangle"}
+          triangleStyles={
+            windowWidth >= 1280
+              ? "member_fullYellowBottomLeftTriangle XLleftTriangleStyles"
+              : "member_desktopYellowBottomLeftTriangle leftTriangleStyles"
+          }
+          nameStyles={
+            windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
+          }
+          imgStyles={windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"}
+          bioStyles={
+            windowWidth >= 1280 ? "XLleftBioStyles ml-[1em]" : "leftBioStyles"
+          }
+          blurbStyles={
+            windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
+          }
+          scrollStyles={
+            windowWidth >= 1280 ? "XLleftScrollStyles" : "leftScrollStyles"
+          }
+        />
       </div>
 
       {/* RENJUN */}
