@@ -1,6 +1,10 @@
 # NCT DREAM SHOWCASE
 
-initial commit README
+Website created in order to showcase the KPOP group NCT DREAM. Skills worked on thorughout the course of this porject include but are not limited to, React Hooks (useState, useEffect, useRef), working with and calling an external API (
+
+## DEMO
+
+##
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
