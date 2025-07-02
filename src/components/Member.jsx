@@ -6,7 +6,7 @@ const Member = (props) => {
       <div
         className="grid grid-cols-6 grid-rows-6
       lg:hidden
-      w-[480px] m-auto"
+      w-full sm:w-[440px] m-auto"
       >
         <h2
           className="col-start-1 col-end-7 row-start-1 row-end-3 justify-self-end uppercase z-2
@@ -36,7 +36,7 @@ const Member = (props) => {
           <div className={props.mobileT}></div>
         </div>
       </div>
-      <div className="w-[480px] m-auto lg:hidden">
+      <div className="w-full sm:w-[440px] m-auto lg:hidden">
         <p className="w-[90%] m-auto font-(family-name:--font-text) mb-[1.5em]">
           Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
           faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
