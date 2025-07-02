@@ -7,7 +7,7 @@ const Navigation = (props) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
 
       if (window.scrollY >= 100) {
         setIsScrolled(true);
