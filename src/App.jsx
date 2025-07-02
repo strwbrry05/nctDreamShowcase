@@ -24,6 +24,7 @@ import lm_jisungFull from "./assets/images/lightMode/lm_jisungFull.png";
 import dm_jisungFull from "./assets/images/darkMode/dm_jisungFull.png";
 import DMHero from "./components/DMHero";
 import DayNight from "./components/DayNight";
+import Socials from "./components/Socials";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -374,6 +375,10 @@ function App() {
 
       <div className={`bg-(--color-red)`}>
         <QA isDark={isDark} />
+      </div>
+
+      <div>
+        <Socials />
       </div>
 
       <Footer />
