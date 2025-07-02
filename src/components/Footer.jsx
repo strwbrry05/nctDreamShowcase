@@ -25,7 +25,7 @@ const Footer = () => {
           className={`rounded p-1.5 mr-[0.5em] footer_darkMode text-(--color-black)`}
         />
         <FaRegHeart
-          className={`rounded p-1.5 mr-[0.5em] footer_darkMode text-(--color-black)`}
+          className={`rounded p-1.5  footer_darkMode text-(--color-black)`}
         />
       </div>
       <p className="font-light text-[0.75rem]">
