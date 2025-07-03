@@ -7,11 +7,15 @@ import { FaSpotify } from "react-icons/fa";
 import Social from "./Social";
 import mark_pc from "../assets/images/lightMode/lm_markPC.png";
 import renjun_pc from "../assets/images/lightMode/lm_renjunPC.png";
+import jeno_pc from "../assets/images/lightMode/lm_jenoPC.png";
+import haechan_pc from "../assets/images/lightMode/lm_haechanPC.png";
+import jaemin_pc from "../assets/images/lightMode/lm_jaeminPC.png";
+import chenle_pc from "../assets/images/lightMode/lm_chenlePC.png";
+import jisung_pc from "../assets/images/lightMode/lm_jisungPC.png";
 
 import { DndContext } from "@dnd-kit/core";
 import { restrictToParentElement } from "@dnd-kit/modifiers";
 import Draggable from "./Draggable";
-import Droppable from "./Droppable";
 import { useEffect, useState } from "react";
 
 const Socials = () => {
@@ -20,17 +24,66 @@ const Socials = () => {
       id: "mark",
       content: mark_pc,
       position: {
-        x: 50,
-        y: 100,
+        x: 40,
+        y: 21,
       },
+      scale: 1,
+      isSelected: false,
+      z: 0,
     },
     {
       id: "renjun",
       content: renjun_pc,
       position: {
-        x: 100,
-        y: 200,
+        x: 24,
+        y: 55,
       },
+      rotate: -25,
+    },
+    {
+      id: "jeno",
+      content: jeno_pc,
+      position: {
+        x: 55,
+        y: 60,
+      },
+      rotate: 25,
+    },
+    {
+      id: "haechan",
+      content: haechan_pc,
+      position: {
+        x: 59,
+        y: 17,
+      },
+      rotate: 25,
+    },
+    {
+      id: "jaemin",
+      content: jaemin_pc,
+      position: {
+        x: 36,
+        y: 50,
+      },
+      rotate: 25,
+    },
+    {
+      id: "chenle",
+      content: chenle_pc,
+      position: {
+        x: 25,
+        y: 17,
+      },
+      rotate: 25,
+    },
+    {
+      id: "jisung",
+      content: jisung_pc,
+      position: {
+        x: 50,
+        y: 40,
+      },
+      rotate: -25,
     },
   ]);
 
@@ -55,8 +108,8 @@ const Socials = () => {
 
   function handleDragEnd(event) {
     const pc = photocards.find((x) => x.id === event.active.id);
-    pc.position.x += event.delta.x;
-    pc.position.y += event.delta.y;
+    pc.position.x += (event.delta.x / window.innerWidth) * 100;
+    pc.position.y += (event.delta.y / window.innerWidth) * 100;
     const _photocards = photocards.map((x) => {
       if (x.id === pc.id) return pc;
       return x;
@@ -64,15 +117,45 @@ const Socials = () => {
     setPhotocards(_photocards);
   }
 
+  //   get working at some point
+  //   function selectPC(id) {
+  //     const _photocards = photocards.map((pc) => {
+  //       if (pc.id == id) {
+  //         pc.isSelected = !pc.isSelected;
+  //         if (pc.isSelected) {
+  //           pc.scale = 1;
+  //           pc.z = 0;
+  //         } else {
+  //           pc.scale = 2;
+  //           pc.position.x = 45;
+  //           pc.position.y = 30;
+  //           pc.z = 3;
+  //         }
+  //       }
+  //       return pc;
+  //     });
+  //     setPhotocards(_photocards);
+  //     console.log(_photocards);
+  //   }
+
   return (
     <DndContext onDragEnd={handleDragEnd} modifiers={[restrictToParentElement]}>
-      <div className="relative p-[2em]">
-        <div className="flex flex-col justify-center items-center pt-[3em] pb-[3em] ">
+      <div className="relative  z-2">
+        <div
+          className="z-3 flex flex-col justify-center items-center pt-[3em] pb-[3em] 
+        xl:pt-[4em] xl:pb-[5em] "
+        >
+          <p
+            className="hidden sm:block 
+            font-(family-name:--font-text) font-bold "
+          >
+            move and click photocards
+          </p>
           <p
             className="hidden sm:block 
             font-(family-name:--font-text) font-bold mb-[2em] "
           >
-            move and click photocards
+            (double click to select)
           </p>
           <div className="w-full flex flex-col justify-center items-center pt-[2em]">
             <Social icon={<FiTwitter />} name={"Twitter"} />
@@ -85,8 +168,8 @@ const Socials = () => {
             <Draggable
               styles={{
                 position: "absolute",
-                left: `${pc.position.x}px`,
-                top: `${pc.position.y}px`,
+                left: `${pc.position.x}%`,
+                top: `${pc.position.y}%`,
               }}
               key={pc.id}
               id={pc.id}
