@@ -5,92 +5,92 @@ import { FiYoutube } from "react-icons/fi";
 import { FaSpotify } from "react-icons/fa";
 
 import Social from "./Social";
-import mark_pc from "../assets/images/lightMode/lm_markPC.png";
-import renjun_pc from "../assets/images/lightMode/lm_renjunPC.png";
-import jeno_pc from "../assets/images/lightMode/lm_jenoPC.png";
-import haechan_pc from "../assets/images/lightMode/lm_haechanPC.png";
-import jaemin_pc from "../assets/images/lightMode/lm_jaeminPC.png";
-import chenle_pc from "../assets/images/lightMode/lm_chenlePC.png";
-import jisung_pc from "../assets/images/lightMode/lm_jisungPC.png";
+// import mark_pc from "../assets/images/lightMode/lm_markPC.png";
+// import renjun_pc from "../assets/images/lightMode/lm_renjunPC.png";
+// import jeno_pc from "../assets/images/lightMode/lm_jenoPC.png";
+// import haechan_pc from "../assets/images/lightMode/lm_haechanPC.png";
+// import jaemin_pc from "../assets/images/lightMode/lm_jaeminPC.png";
+// import chenle_pc from "../assets/images/lightMode/lm_chenlePC.png";
+// import jisung_pc from "../assets/images/lightMode/lm_jisungPC.png";
 
 import { DndContext } from "@dnd-kit/core";
 import { restrictToParentElement } from "@dnd-kit/modifiers";
 import Draggable from "./Draggable";
 import { useEffect, useState } from "react";
 
-const Socials = () => {
-  const [photocards, setPhotocards] = useState([
-    {
-      id: "mark",
-      content: mark_pc,
-      position: {
-        x: 40,
-        y: 21,
-      },
-      scale: 1,
-      isSelected: false,
-      z: 0,
-    },
-    {
-      id: "renjun",
-      content: renjun_pc,
-      position: {
-        x: 24,
-        y: 55,
-      },
-      rotate: -25,
-    },
-    {
-      id: "jeno",
-      content: jeno_pc,
-      position: {
-        x: 55,
-        y: 60,
-      },
-      rotate: 25,
-    },
-    {
-      id: "haechan",
-      content: haechan_pc,
-      position: {
-        x: 59,
-        y: 17,
-      },
-      rotate: 25,
-    },
-    {
-      id: "jaemin",
-      content: jaemin_pc,
-      position: {
-        x: 36,
-        y: 50,
-      },
-      rotate: 25,
-    },
-    {
-      id: "chenle",
-      content: chenle_pc,
-      position: {
-        x: 25,
-        y: 17,
-      },
-      rotate: 25,
-    },
-    {
-      id: "jisung",
-      content: jisung_pc,
-      position: {
-        x: 50,
-        y: 40,
-      },
-      rotate: -25,
-    },
-  ]);
+const Socials = (props) => {
+  //   const [photocards, setPhotocards] = useState([
+  //     {
+  //       id: "mark",
+  //       content: mark_pc,
+  //       position: {
+  //         x: 40,
+  //         y: 21,
+  //       },
+  //     },
+  //     {
+  //       id: "renjun",
+  //       content: renjun_pc,
+  //       position: {
+  //         x: 24,
+  //         y: 55,
+  //       },
+  //       rotate: -25,
+  //     },
+  //     {
+  //       id: "jeno",
+  //       content: jeno_pc,
+  //       position: {
+  //         x: 55,
+  //         y: 60,
+  //       },
+  //       rotate: 25,
+  //     },
+  //     {
+  //       id: "haechan",
+  //       content: haechan_pc,
+  //       position: {
+  //         x: 59,
+  //         y: 17,
+  //       },
+  //       rotate: 25,
+  //     },
+  //     {
+  //       id: "jaemin",
+  //       content: jaemin_pc,
+  //       position: {
+  //         x: 36,
+  //         y: 50,
+  //       },
+  //       rotate: 25,
+  //     },
+  //     {
+  //       id: "chenle",
+  //       content: chenle_pc,
+  //       position: {
+  //         x: 25,
+  //         y: 17,
+  //       },
+  //       rotate: 25,
+  //     },
+  //     {
+  //       id: "jisung",
+  //       content: jisung_pc,
+  //       position: {
+  //         x: 50,
+  //         y: 40,
+  //       },
+  //       rotate: -25,
+  //     },
+  //   ]);
+
+  const [photocards, setPhotocards] = useState(props.pcs);
 
   useEffect(() => {
     const handleResize = () => {
       const _photocards = photocards.map((pc) => {
-        const windowLimit = window.innerWidth - 300;
+        const windowLimit =
+          ((window.innerWidth - 250) / window.innerWidth) * 100;
         if (pc.position.x > windowLimit) {
           pc.position.x = windowLimit;
         }
@@ -109,7 +109,7 @@ const Socials = () => {
   function handleDragEnd(event) {
     const pc = photocards.find((x) => x.id === event.active.id);
     pc.position.x += (event.delta.x / window.innerWidth) * 100;
-    pc.position.y += (event.delta.y / window.innerWidth) * 100;
+    pc.position.y += (event.delta.y / window.innerHeight) * 100;
     const _photocards = photocards.map((x) => {
       if (x.id === pc.id) return pc;
       return x;
@@ -117,7 +117,6 @@ const Socials = () => {
     setPhotocards(_photocards);
   }
 
-  //   get working at some point
   //   function selectPC(id) {
   //     const _photocards = photocards.map((pc) => {
   //       if (pc.id == id) {
@@ -140,29 +139,45 @@ const Socials = () => {
 
   return (
     <DndContext onDragEnd={handleDragEnd} modifiers={[restrictToParentElement]}>
-      <div className="relative  z-2">
+      <div
+        className={`relative z-2 ${
+          props.isDark ? "bg-(--color-dark-blue) p-[2em]" : "m-[2em]"
+        }`}
+      >
         <div
-          className="z-3 flex flex-col justify-center items-center pt-[3em] pb-[3em] 
-        xl:pt-[4em] xl:pb-[5em] "
+          className={`flex flex-col justify-center items-center pt-[3em] pb-[3em] 
+        xl:pt-[4em] xl:pb-[5em] 
+        ${props.isDark ? "text-(--color-white)" : ""}`}
         >
           <p
             className="hidden sm:block 
-            font-(family-name:--font-text) font-bold "
+            font-(family-name:--font-text) font-bold mb-[2em]"
           >
-            move and click photocards
+            move and drag photocards
           </p>
-          <p
-            className="hidden sm:block 
-            font-(family-name:--font-text) font-bold mb-[2em] "
-          >
-            (double click to select)
-          </p>
+
           <div className="w-full flex flex-col justify-center items-center pt-[2em]">
-            <Social icon={<FiTwitter />} name={"Twitter"} />
-            <Social icon={<FiInstagram />} name={"Instagram"} />
-            <Social icon={<FaTiktok />} name={"TikTok"} />
-            <Social icon={<FaSpotify />} name={"Spotify"} />
-            <Social icon={<FiYoutube />} name={"YouTube"} />
+            <Social
+              icon={<FiTwitter />}
+              name={"Twitter"}
+              isDark={props.isDark}
+            />
+            <Social
+              icon={<FiInstagram />}
+              name={"Instagram"}
+              isDark={props.isDark}
+            />
+            <Social icon={<FaTiktok />} name={"TikTok"} isDark={props.isDark} />
+            <Social
+              icon={<FaSpotify />}
+              name={"Spotify"}
+              isDark={props.isDark}
+            />
+            <Social
+              icon={<FiYoutube />}
+              name={"YouTube"}
+              isDark={props.isDark}
+            />
           </div>
           {photocards.map((pc) => (
             <Draggable
