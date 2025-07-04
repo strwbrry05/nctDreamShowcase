@@ -49,7 +49,7 @@ const Member = (props) => {
           per conubia nostra inceptos himenaeos.
         </p>
         <div className={`m-auto`}>
-          <MemberSlider scrollColor={props.scrollColor} />
+          <MemberSlider scrollColor={props.scrollColor} slides={props.slides} />
         </div>
       </div>
 
@@ -99,7 +99,10 @@ const Member = (props) => {
             className={`z-2 ${props.scrollStyles} 
           `}
           >
-            <MemberSlider scrollColor={props.scrollColor} />
+            <MemberSlider
+              scrollColor={props.scrollColor}
+              slides={props.slides}
+            />
           </div>
         </div>
       </div>
