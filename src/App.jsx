@@ -40,6 +40,7 @@ import chenle_pc from "./assets/images/lightMode/lm_chenlePC.png";
 import Dchenle_pc from "./assets/images/darkMode/dm_chenlePC.png";
 import jisung_pc from "./assets/images/lightMode/lm_jisungPC.png";
 import Djisung_pc from "./assets/images/darkMode/dm_jisungPC.png";
+import MemberSlider from "./components/MemberSlider";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -224,7 +225,9 @@ function App() {
           isDark={isDark}
           color={isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"}
           scrollColor={
-            isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
+            isDark
+              ? "bg-(--color-member-light) backdrop-opacity-80"
+              : "bg-(--color-yellow)"
           }
           name={"mark"}
           birthday={"August 02 1999"}

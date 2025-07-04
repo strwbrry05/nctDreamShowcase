@@ -1,4 +1,6 @@
 import React from "react";
+import Slider from "react-slick";
+import MemberSlider from "./MemberSlider";
 
 const Member = (props) => {
   return (
@@ -46,9 +48,9 @@ const Member = (props) => {
           hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
           per conubia nostra inceptos himenaeos.
         </p>
-        <div
-          className={`w-[90%] h-[200px] ${props.scrollColor} m-auto opacity-[70%]`}
-        ></div>
+        <div className={`m-auto`}>
+          <MemberSlider scrollColor={props.scrollColor} />
+        </div>
       </div>
 
       <div className="hidden lg:block lg:w-[950px] xl:w-[1200px] m-auto">
@@ -94,9 +96,11 @@ const Member = (props) => {
           `}
           ></div>
           <div
-            className={`z-2 ${props.scrollStyles} m-auto opacity-[70%]
-          ${props.scrollColor}`}
-          ></div>
+            className={`z-2 ${props.scrollStyles} 
+          `}
+          >
+            <MemberSlider scrollColor={props.scrollColor} />
+          </div>
         </div>
       </div>
     </div>

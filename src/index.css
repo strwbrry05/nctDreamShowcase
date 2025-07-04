@@ -142,14 +142,10 @@
 .rightScrollStyles {
   grid-column: 1/11;
   grid-row: 9/13;
-  width: 95%;
-  height: 180px;
 }
 .XLrightScrollStyles {
   grid-column: 1/11;
   grid-row: 7/10;
-  width: 90%;
-  height: 200px;
 }
 
 
@@ -223,14 +219,10 @@
 .leftScrollStyles {
   grid-column: 3/13;
   grid-row: 9/13;
-  width: 95%;
-  height: 180px;
 }
 .XLleftScrollStyles {
   grid-column: 3/13;
   grid-row: 7/10;
-  width: 90%;
-  height: 200px;
 }
 
 /*################
