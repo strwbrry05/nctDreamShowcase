@@ -32,6 +32,30 @@ import lm_jeno3 from "../assets/images/lightMode/lm_jeno3.png";
 import lm_jeno4 from "../assets/images/lightMode/lm_jeno4.png";
 import lm_jeno5 from "../assets/images/lightMode/lm_jeno5.png";
 
+import lm_haechan1 from "../assets/images/lightMode/lm_haechan1.png";
+import lm_haechan2 from "../assets/images/lightMode/lm_haechan2.png";
+import lm_haechan3 from "../assets/images/lightMode/lm_haechan3.png";
+import lm_haechan4 from "../assets/images/lightMode/lm_haechan4.png";
+import lm_haechan5 from "../assets/images/lightMode/lm_haechan5.png";
+
+import lm_jaemin1 from "../assets/images/lightMode/lm_jaemin1.png";
+import lm_jaemin2 from "../assets/images/lightMode/lm_jaemin2.png";
+import lm_jaemin3 from "../assets/images/lightMode/lm_jaemin3.png";
+import lm_jaemin4 from "../assets/images/lightMode/lm_jaemin4.png";
+import lm_jaemin5 from "../assets/images/lightMode/lm_jaemin5.png";
+
+import lm_chenle1 from "../assets/images/lightMode/lm_chenle1.png";
+import lm_chenle2 from "../assets/images/lightMode/lm_chenle2.png";
+import lm_chenle3 from "../assets/images/lightMode/lm_chenle3.png";
+import lm_chenle4 from "../assets/images/lightMode/lm_chenle4.png";
+import lm_chenle5 from "../assets/images/lightMode/lm_chenle5.png";
+
+import lm_jisung1 from "../assets/images/lightMode/lm_jisung1.png";
+import lm_jisung2 from "../assets/images/lightMode/lm_jisung2.png";
+import lm_jisung3 from "../assets/images/lightMode/lm_jisung3.png";
+import lm_jisung4 from "../assets/images/lightMode/lm_jisung4.png";
+import lm_jisung5 from "../assets/images/lightMode/lm_jisung5.png";
+
 import Member from "./Member";
 
 const AllMembers = (props) => {
@@ -57,6 +81,38 @@ const AllMembers = (props) => {
     { id: 3, src: lm_jeno3, alt: "jeno slide 3" },
     { id: 4, src: lm_jeno4, alt: "jeno slide 4" },
     { id: 5, src: lm_jeno5, alt: "jeno slide 5" },
+  ];
+
+  const haechanSlides = [
+    { id: 1, src: lm_haechan1, alt: "haechan slide 1" },
+    { id: 2, src: lm_haechan2, alt: "haechan slide 2" },
+    { id: 3, src: lm_haechan3, alt: "haechan slide 3" },
+    { id: 4, src: lm_haechan4, alt: "haechan slide 4" },
+    { id: 5, src: lm_haechan5, alt: "haechan slide 5" },
+  ];
+
+  const jaeminSlides = [
+    { id: 1, src: lm_jaemin1, alt: "jaemin slide 1" },
+    { id: 2, src: lm_jaemin2, alt: "jaemin slide 2" },
+    { id: 3, src: lm_jaemin3, alt: "jaemin slide 3" },
+    { id: 4, src: lm_jaemin4, alt: "jaemin slide 4" },
+    { id: 5, src: lm_jaemin5, alt: "jaemin slide 5" },
+  ];
+
+  const chenleSlides = [
+    { id: 1, src: lm_chenle1, alt: "chenle slide 1" },
+    { id: 2, src: lm_chenle2, alt: "chenle slide 2" },
+    { id: 3, src: lm_chenle3, alt: "chenle slide 3" },
+    { id: 4, src: lm_chenle4, alt: "chenle slide 4" },
+    { id: 5, src: lm_chenle5, alt: "chenle slide 5" },
+  ];
+
+  const jisungSlides = [
+    { id: 1, src: lm_jisung1, alt: "jisung slide 1" },
+    { id: 2, src: lm_jisung2, alt: "jisung slide 2" },
+    { id: 3, src: lm_jisung3, alt: "jisung slide 3" },
+    { id: 4, src: lm_jisung4, alt: "jisung slide 4" },
+    { id: 5, src: lm_jisung5, alt: "jisung slide 5" },
   ];
 
   return (
@@ -219,7 +275,7 @@ const AllMembers = (props) => {
         }`}
       >
         <Member
-          slides={renjunSlides}
+          slides={haechanSlides}
           color={
             props.isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"
           }
@@ -268,7 +324,7 @@ const AllMembers = (props) => {
         }`}
       >
         <Member
-          slides={renjunSlides}
+          slides={jaeminSlides}
           color={props.isDark ? "text-(--color-red)" : "text-(--color-red)"}
           scrollColor={
             props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-red)"
@@ -313,7 +369,7 @@ const AllMembers = (props) => {
         }`}
       >
         <Member
-          slides={renjunSlides}
+          slides={chenleSlides}
           color={
             props.isDark ? "text-(--color-dark-red)" : "text-(--color-blue)"
           }
@@ -372,7 +428,7 @@ const AllMembers = (props) => {
         }`}
       >
         <Member
-          slides={renjunSlides}
+          slides={jisungSlides}
           color={
             props.isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"
           }
