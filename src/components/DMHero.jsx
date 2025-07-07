@@ -1,15 +1,95 @@
 import React from "react";
 import dm_Hero from "../assets/images/darkMode/dm_hero.png";
+import dm_jisung from "../assets/images/darkMode/dm_jisungHero.png";
+import dm_chenle from "../assets/images/darkMode/dm_chenleHero.png";
+import dm_jaemin from "../assets/images/darkMode/dm_jaeminHero.png";
+import dm_haechan from "../assets/images/darkMode/dm_haechanHero.png";
+import dm_jeno from "../assets/images/darkMode/dm_jenoHero.png";
+import dm_renjun from "../assets/images/darkMode/dm_renjunHero.png";
+import dm_mark from "../assets/images/darkMode/dm_markHero.png";
 
 const DMHero = () => {
   return (
-    <div className="flex justify-center">
-      <img
-        src={dm_Hero}
-        alt="group"
-        className="h-[320px] sm:h-[400px] md:h-[475px] lg:h-[550px] xl:h-[750px]"
-      />
-    </div>
+    <>
+      <div className="flex justify-center">
+        <img
+          src={dm_Hero}
+          alt="group"
+          className="sm:absolute z-0 h-[320px] sm:h-[400px] md:h-[475px] lg:h-[550px] xl:h-[750px]"
+        />
+        <img
+          src={dm_jisung}
+          alt="jisung"
+          className="z-1 relative hover:cursor-pointer
+              hidden
+              sm:block sm:h-[260px] sm:left-[105px] sm:top-[5px] sm:hover:scale-[1.1]
+              md:h-[300px] md:left-[178px] md:top-[20px]
+              lg:h-[355px] lg:left-[215px] lg:top-[21px]
+              xl:h-[490px] xl:left-[283px] xl:top-[30px]  xl:hover:scale-[1.05]"
+        />
+        <img
+          src={dm_chenle}
+          alt="chenle"
+          className="z-2 relative hover:cursor-pointer
+              hidden
+              sm:block sm:h-[100px] sm:left-[475px] sm:hover:scale-[1.1]
+              md:h-[135px] md:left-[295px] md:top-[60px]
+              lg:h-[150px] lg:left-[347px] lg:top-[70px]
+              xl:h-[205px] xl:left-[465px] xl:top-[95px]  xl:hover:scale-[1.05]"
+        />
+        <img
+          src={dm_jaemin}
+          alt="jaemin"
+          className="z-2 relative hover:cursor-pointer
+              hidden
+              sm:block sm:h-[135px] sm:left-[354px] sm:top-[63px] sm:hover:scale-[1.1]
+              md:h-[160px] md:left-[440px] md:top-[75px]
+              lg:h-[180px] lg:left-[524px] lg:top-[90px]
+              xl:h-[250px] xl:left-[702px] xl:top-[120px]  xl:hover:scale-[1.05]"
+        />
+        <img
+          src={dm_jeno}
+          alt="jaemin"
+          className="z-1 relative hover:cursor-pointer
+              hidden
+              sm:block sm:h-[200px] sm:left-[35px] sm:top-[100px] sm:hover:scale-[1.1]
+              md:h-[320px] md:left-[192px] md:top-[157px]
+              lg:h-[380px] lg:left-[237px] lg:top-[180px]
+              xl:h-[510px] xl:left-[311px] xl:top-[248px]  xl:hover:scale-[1.05]"
+        />
+        <img
+          src={dm_haechan}
+          alt="haechan"
+          className="z-1 relative hover:cursor-pointer
+              hidden
+              sm:block sm:h-[100px] sm:left-[-204px] sm:hover:scale-[1.1]
+              md:h-[155px] md:left-[3px] md:top-[25px]
+              lg:h-[185px] lg:left-[9px] lg:top-[25px]
+              xl:h-[250px] xl:left-[7px] xl:top-[35px]  xl:hover:scale-[1.05]"
+        />
+        <img
+          src={dm_mark}
+          alt="mark"
+          className="z-1 relative hover:cursor-pointer
+              hidden
+              sm:block sm:h-[200px] sm:left-[-471px] sm:hover:scale-[1.1]
+              md:h-[225px] md:left-[-197px] md:top-[50px]
+              lg:h-[270px] lg:left-[-228px] lg:top-[50px]
+              xl:h-[350px] xl:left-[-310px] xl:top-[85px]  xl:hover:scale-[1.05]"
+        />
+        <img
+          src={dm_renjun}
+          alt="renjun"
+          className="z-2 relative hover:cursor-pointer
+              hidden
+              sm:block sm:h-[130px] sm:top-[115px] sm:left-[-610px] sm:hover:scale-[1.1]
+              md:h-[168px] md:top-[78px] md:left-[-503px]
+              lg:h-[200px] lg:top-[87px] lg:left-[-587px]
+              xl:h-[275px] xl:top-[120px] xl:left-[-795px]  xl:hover:scale-[1.05]"
+        />
+      </div>
+      <div className="sm:pb-[15em] md:pb-[15em] lg:pb-[11em] xl:pb-[18em]"></div>
+    </>
   );
 };
 
