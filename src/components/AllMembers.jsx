@@ -26,6 +26,12 @@ import lm_mark3 from "../assets/images/lightMode/lm_mark3.png";
 import lm_mark4 from "../assets/images/lightMode/lm_mark4.png";
 import lm_mark5 from "../assets/images/lightMode/lm_mark5.png";
 
+import lm_jeno1 from "../assets/images/lightMode/lm_jeno1.png";
+import lm_jeno2 from "../assets/images/lightMode/lm_jeno2.png";
+import lm_jeno3 from "../assets/images/lightMode/lm_jeno3.png";
+import lm_jeno4 from "../assets/images/lightMode/lm_jeno4.png";
+import lm_jeno5 from "../assets/images/lightMode/lm_jeno5.png";
+
 import Member from "./Member";
 
 const AllMembers = (props) => {
@@ -43,6 +49,14 @@ const AllMembers = (props) => {
     { id: 3, src: lm_mark3, alt: "mark slide 3" },
     { id: 4, src: lm_mark4, alt: "mark slide 4" },
     { id: 5, src: lm_mark5, alt: "mark slide 5" },
+  ];
+
+  const jenoSlides = [
+    { id: 1, src: lm_jeno1, alt: "jeno slide 1" },
+    { id: 2, src: lm_jeno2, alt: "jeno slide 2" },
+    { id: 3, src: lm_jeno3, alt: "jeno slide 3" },
+    { id: 4, src: lm_jeno4, alt: "jeno slide 4" },
+    { id: 5, src: lm_jeno5, alt: "jeno slide 5" },
   ];
 
   return (
@@ -150,7 +164,7 @@ const AllMembers = (props) => {
         }`}
       >
         <Member
-          slides={renjunSlides}
+          slides={jenoSlides}
           color={
             props.isDark ? "text-(--color-dark-red)" : "text-(--color-blue)"
           }
