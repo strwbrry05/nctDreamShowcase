@@ -59,6 +59,9 @@ import lm_jisung5 from "../assets/images/lightMode/lm_jisung5.png";
 import Member from "./Member";
 
 const AllMembers = (props) => {
+  // dark mode arrays
+
+  // light mode arrays
   const renjunSlides = [
     { id: 1, src: lm_renjun1, alt: "renjun slide 1" },
     { id: 2, src: lm_renjun2, alt: "renjun slide 2" },
