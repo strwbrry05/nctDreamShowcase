@@ -25,6 +25,7 @@ import Dchenle_pc from "./assets/images/darkMode/dm_chenlePC.png";
 import jisung_pc from "./assets/images/lightMode/lm_jisungPC.png";
 import Djisung_pc from "./assets/images/darkMode/dm_jisungPC.png";
 import Albums from "./components/Albums";
+import Youtube from "./components/Youtube";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -218,6 +219,14 @@ function App() {
       ) : (
         <Socials pcs={lmPCs} />
       )}
+
+      <div
+        className={`${
+          isDark ? "bg-(--color-dark-blue)" : "bg-(--color-white)"
+        }`}
+      >
+        <Youtube isDark={isDark} />
+      </div>
 
       <Footer />
     </>
