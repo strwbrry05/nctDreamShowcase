@@ -8,6 +8,8 @@ import DMHero from "./components/DMHero";
 import AllMembers from "./components/AllMembers";
 import QA from "./components/QA";
 import Socials from "./components/Socials";
+import Albums from "./components/Albums";
+import Youtube from "./components/Youtube";
 import Footer from "./components/Footer";
 
 import mark_pc from "./assets/images/lightMode/lm_markPC.png";
@@ -24,8 +26,6 @@ import chenle_pc from "./assets/images/lightMode/lm_chenlePC.png";
 import Dchenle_pc from "./assets/images/darkMode/dm_chenlePC.png";
 import jisung_pc from "./assets/images/lightMode/lm_jisungPC.png";
 import Djisung_pc from "./assets/images/darkMode/dm_jisungPC.png";
-import Albums from "./components/Albums";
-import Youtube from "./components/Youtube";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
