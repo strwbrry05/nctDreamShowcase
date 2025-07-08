@@ -24,6 +24,7 @@ import chenle_pc from "./assets/images/lightMode/lm_chenlePC.png";
 import Dchenle_pc from "./assets/images/darkMode/dm_chenlePC.png";
 import jisung_pc from "./assets/images/lightMode/lm_jisungPC.png";
 import Djisung_pc from "./assets/images/darkMode/dm_jisungPC.png";
+import Albums from "./components/Albums";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -201,6 +202,10 @@ function App() {
       )}
 
       <AllMembers isDark={isDark} windowWidth={windowWidth} />
+
+      <div className={`${isDark ? "bg-(--color-dark-blue)" : ""} `}>
+        <Albums isDark={isDark} />
+      </div>
 
       <div className={`bg-(--color-red)`}>
         <QA isDark={isDark} />
