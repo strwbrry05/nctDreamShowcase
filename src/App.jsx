@@ -28,7 +28,7 @@ import jisung_pc from "./assets/images/lightMode/lm_jisungPC.png";
 import Djisung_pc from "./assets/images/darkMode/dm_jisungPC.png";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const lmPCs = [
     {
       id: "mark",

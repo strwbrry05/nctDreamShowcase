@@ -7,6 +7,7 @@ import dm_haechan from "../assets/images/darkMode/dm_haechanHero.png";
 import dm_jeno from "../assets/images/darkMode/dm_jenoHero.png";
 import dm_renjun from "../assets/images/darkMode/dm_renjunHero.png";
 import dm_mark from "../assets/images/darkMode/dm_markHero.png";
+import { motion } from "motion/react";
 
 const DMHero = () => {
   return (
@@ -17,7 +18,13 @@ const DMHero = () => {
           alt="group"
           className="sm:absolute z-0 h-[320px] sm:h-[400px] md:h-[475px] lg:h-[550px] xl:h-[750px]"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.3, bounce: 0.5 },
+          }}
           src={dm_jisung}
           alt="jisung"
           className="z-1 relative hover:cursor-pointer
@@ -27,7 +34,13 @@ const DMHero = () => {
               lg:h-[355px] lg:left-[215px] lg:top-[21px]
               xl:h-[490px] xl:left-[283px] xl:top-[30px]  xl:hover:scale-[1.05]"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.5, bounce: 0.5 },
+          }}
           src={dm_chenle}
           alt="chenle"
           className="z-2 relative hover:cursor-pointer
@@ -37,7 +50,13 @@ const DMHero = () => {
               lg:h-[150px] lg:left-[347px] lg:top-[70px]
               xl:h-[205px] xl:left-[465px] xl:top-[95px]  xl:hover:scale-[1.05]"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.9, bounce: 0.5 },
+          }}
           src={dm_jaemin}
           alt="jaemin"
           className="z-2 relative hover:cursor-pointer
@@ -47,7 +66,13 @@ const DMHero = () => {
               lg:h-[180px] lg:left-[524px] lg:top-[90px]
               xl:h-[250px] xl:left-[702px] xl:top-[120px]  xl:hover:scale-[1.05]"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.8, bounce: 0.5 },
+          }}
           src={dm_jeno}
           alt="jaemin"
           className="z-1 relative hover:cursor-pointer
@@ -57,7 +82,13 @@ const DMHero = () => {
               lg:h-[380px] lg:left-[237px] lg:top-[180px]
               xl:h-[510px] xl:left-[311px] xl:top-[248px]  xl:hover:scale-[1.05]"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.7, bounce: 0.5 },
+          }}
           src={dm_haechan}
           alt="haechan"
           className="z-1 relative hover:cursor-pointer
@@ -67,7 +98,13 @@ const DMHero = () => {
               lg:h-[185px] lg:left-[9px] lg:top-[25px]
               xl:h-[250px] xl:left-[7px] xl:top-[35px]  xl:hover:scale-[1.05]"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
+          }}
           src={dm_mark}
           alt="mark"
           className="z-1 relative hover:cursor-pointer
@@ -77,7 +114,13 @@ const DMHero = () => {
               lg:h-[270px] lg:left-[-228px] lg:top-[50px]
               xl:h-[350px] xl:left-[-310px] xl:top-[85px]  xl:hover:scale-[1.05]"
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
           src={dm_renjun}
           alt="renjun"
           className="z-2 relative hover:cursor-pointer
