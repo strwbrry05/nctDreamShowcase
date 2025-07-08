@@ -125,7 +125,7 @@ const Navigation = (props) => {
             
             ml-[2em] lg:ml-[4em] xl:ml-[6em]`}
               >
-                Photocards
+                Q&A
               </li>
               <li
                 className={`navBarListItem text-(--color-dark-gray) hover:text-(--color-black)
@@ -138,7 +138,7 @@ const Navigation = (props) => {
             
             ml-[2em] lg:ml-[4em] xl:ml-[6em]`}
               >
-                Q&A
+                Photocards
               </li>
               <li
                 className={`navBarListItem text-(--color-dark-gray) hover:text-(--color-black)
@@ -217,7 +217,7 @@ const Navigation = (props) => {
           }
           ${props.isDark ? "darkModeNavBarListItem" : "lightModeBarListItem"}`}
         >
-          Photocards
+          Q&A
         </h2>
         <h2
           className={`navBarListItem text-(--color-dark-gray) hover:text-(--color-black)
@@ -228,7 +228,7 @@ const Navigation = (props) => {
           }
           ${props.isDark ? "darkModeNavBarListItem" : "lightModeBarListItem"}`}
         >
-          Q&A
+          Photocards
         </h2>
         <h2
           className={`navBarListItem text-(--color-dark-gray) hover:text-(--color-black)
