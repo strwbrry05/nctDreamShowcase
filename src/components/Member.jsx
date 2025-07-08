@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { motion } from "motion/react";
 import MemberSlider from "./MemberSlider";
 
 const Member = (props) => {
@@ -17,7 +18,8 @@ const Member = (props) => {
         >
           {props.name}
         </h2>
-        <img
+        <motion.img
+          whileHover={{ scale: 1.1 }}
           src={props.IMG}
           alt={props.name}
           className={`z-2 col-start-1 col-end-7 row-start-2 row-end-6
@@ -54,7 +56,7 @@ const Member = (props) => {
       </div>
 
       <div className="hidden lg:block lg:w-[950px] xl:w-[1200px] m-auto">
-        <div className="grid grid-cols-12 grid-rows-12 xl:grid-rows-9">
+        <motion.div className="grid grid-cols-12 grid-rows-12 xl:grid-rows-9">
           <h2
             className={`z-2 
           uppercase ${props.color} font-(family-name:--font-solid) 
@@ -63,7 +65,11 @@ const Member = (props) => {
           >
             {props.name}
           </h2>
-          <img
+          <motion.img
+            initial={{ x: -500, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            whileHover={{ scale: 1.15 }}
+            viewport={{ once: true }}
             src={props.IMG}
             alt=""
             className={`z-2 ${props.imgStyles}
@@ -104,7 +110,7 @@ const Member = (props) => {
               slides={props.slides}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
