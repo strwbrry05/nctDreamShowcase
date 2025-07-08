@@ -15,11 +15,28 @@ const QA = (props) => {
       answer: "lorem",
       opened: false,
     },
-    { question: "When did they debut?", answer: "lorem", opened: false },
-    { question: "When did they debut?", answer: "lorem", opened: true },
-    { question: "When did they debut?", answer: "lorem", opened: false },
-    { question: "When did they debut?", answer: "lorem", opened: false },
-    { question: "When did they debut?", answer: "lorem", opened: false },
+    {
+      question: "How many members are in NCT Dream?",
+      answer: "lorem",
+      opened: false,
+    },
+    {
+      question: "Why should I listen to their music?",
+      answer:
+        "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.",
+      opened: true,
+    },
+    { question: "What is kpop?", answer: "lorem", opened: false },
+    {
+      question: "Tempus leo eu aenean sed diam urna tempor?",
+      answer: "lorem",
+      opened: false,
+    },
+    {
+      question: "Ad litora torquent per conubia nostra?",
+      answer: "lorem",
+      opened: false,
+    },
   ]);
 
   const toggleOpen = (index) => {
