@@ -92,6 +92,7 @@ import dm_jisung4 from "../assets/images/darkMode/dm_jisung4.png";
 import dm_jisung5 from "../assets/images/darkMode/dm_jisung5.png";
 
 import Member from "./Member";
+import { Element } from "react-scroll";
 
 const AllMembers = (props) => {
   // dark mode arrays
@@ -211,357 +212,385 @@ const AllMembers = (props) => {
   return (
     <>
       {/* MARK */}
-      <div
-        className={`${
-          props.isDark ? "bg-(--color-blue) text-(--color-white)" : ""
-        }`}
-      >
-        <Member
-          slides={props.isDark ? DmarkSlides : markSlides}
-          color={
-            props.isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"
-          }
-          scrollColor={
-            props.isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
-          }
-          name={"mark"}
-          birthday={"August 02 1999"}
-          zodiac={"Aquarius"}
-          blood={"A"}
-          IMG={props.isDark ? dm_markFull : lm_markFull}
-          mobileW={props.isDark ? "w-[300px]" : "w-[270px]"}
-          fullW={props.isDark ? "w-[340px]" : "w-[300px]"}
-          mobileT={"member_mobileYellowTopRightTriangle"}
-          triangleStyles={
-            props.windowWidth >= 1280
-              ? "member_fullYellowBottomLeftTriangle XLleftTriangleStyles"
-              : "member_desktopYellowBottomLeftTriangle leftTriangleStyles"
-          }
-          nameStyles={
-            props.windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
-          }
-          imgStyles={
-            props.windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"
-          }
-          bioStyles={
-            props.windowWidth >= 1280
-              ? "XLleftBioStyles ml-[1em]"
-              : "leftBioStyles"
-          }
-          blurbStyles={
-            props.windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
-          }
-          scrollStyles={
-            props.windowWidth >= 1280
-              ? "XLleftScrollStyles"
-              : "leftScrollStyles"
-          }
-        />
-      </div>
+      <Element name="mark">
+        <div
+          className={`${
+            props.isDark ? "bg-(--color-blue) text-(--color-white)" : ""
+          }`}
+        >
+          <Member
+            slides={props.isDark ? DmarkSlides : markSlides}
+            color={
+              props.isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"
+            }
+            scrollColor={
+              props.isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
+            }
+            name={"mark"}
+            birthday={"August 02 1999"}
+            zodiac={"Aquarius"}
+            blood={"A"}
+            IMG={props.isDark ? dm_markFull : lm_markFull}
+            mobileW={props.isDark ? "w-[300px]" : "w-[270px]"}
+            fullW={props.isDark ? "w-[340px]" : "w-[300px]"}
+            mobileT={"member_mobileYellowTopRightTriangle"}
+            triangleStyles={
+              props.windowWidth >= 1280
+                ? "member_fullYellowBottomLeftTriangle XLleftTriangleStyles"
+                : "member_desktopYellowBottomLeftTriangle leftTriangleStyles"
+            }
+            nameStyles={
+              props.windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
+            }
+            imgStyles={
+              props.windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"
+            }
+            bioStyles={
+              props.windowWidth >= 1280
+                ? "XLleftBioStyles ml-[1em]"
+                : "leftBioStyles"
+            }
+            blurbStyles={
+              props.windowWidth >= 1280
+                ? "XLleftBlurbStyles"
+                : "leftBlurbStyles"
+            }
+            scrollStyles={
+              props.windowWidth >= 1280
+                ? "XLleftScrollStyles"
+                : "leftScrollStyles"
+            }
+          />
+        </div>
+      </Element>
 
       {/* RENJUN */}
-      <div
-        className={`${
-          props.isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
-        }`}
-      >
-        <Member
-          slides={props.isDark ? DrenjunSlides : renjunSlides}
-          color={props.isDark ? "text-(--color-red)" : "text-(--color-red)"}
-          scrollColor={
-            props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-red)"
-          }
-          name={"renjun"}
-          birthday={"March 23 2000"}
-          zodiac={"Aries"}
-          blood={"O"}
-          IMG={props.isDark ? dm_renjunFull : lm_renjunFull}
-          mobileW={props.isDark ? "w-[300px]" : "w-[350px]"}
-          fullW={props.isDark ? "w-[340px]" : "w-[400px]"}
-          mobileT={"member_mobileRedTopRightTriangle"}
-          triangleStyles={
-            props.windowWidth >= 1280
-              ? "member_fullRedTopRightTriangle XLrightTriangleStyles"
-              : "member_desktopRedTopRightTriangle rightTriangleStyles"
-          }
-          nameStyles={
-            props.windowWidth >= 1280 ? "XLrightNameStyles" : "rightNameStyles"
-          }
-          imgStyles={
-            props.windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
-          }
-          bioStyles={
-            props.windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
-          }
-          blurbStyles={
-            props.windowWidth >= 1280
-              ? "XLrightBlurbStyles"
-              : "rightBlurbStyles"
-          }
-          scrollStyles={
-            props.windowWidth >= 1280
-              ? "XLrightScrollStyles"
-              : "rightScrollStyles"
-          }
-        />
-      </div>
+      <Element name="renjun">
+        <div
+          className={`${
+            props.isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
+          }`}
+        >
+          <Member
+            slides={props.isDark ? DrenjunSlides : renjunSlides}
+            color={props.isDark ? "text-(--color-red)" : "text-(--color-red)"}
+            scrollColor={
+              props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-red)"
+            }
+            name={"renjun"}
+            birthday={"March 23 2000"}
+            zodiac={"Aries"}
+            blood={"O"}
+            IMG={props.isDark ? dm_renjunFull : lm_renjunFull}
+            mobileW={props.isDark ? "w-[300px]" : "w-[350px]"}
+            fullW={props.isDark ? "w-[340px]" : "w-[400px]"}
+            mobileT={"member_mobileRedTopRightTriangle"}
+            triangleStyles={
+              props.windowWidth >= 1280
+                ? "member_fullRedTopRightTriangle XLrightTriangleStyles"
+                : "member_desktopRedTopRightTriangle rightTriangleStyles"
+            }
+            nameStyles={
+              props.windowWidth >= 1280
+                ? "XLrightNameStyles"
+                : "rightNameStyles"
+            }
+            imgStyles={
+              props.windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
+            }
+            bioStyles={
+              props.windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
+            }
+            blurbStyles={
+              props.windowWidth >= 1280
+                ? "XLrightBlurbStyles"
+                : "rightBlurbStyles"
+            }
+            scrollStyles={
+              props.windowWidth >= 1280
+                ? "XLrightScrollStyles"
+                : "rightScrollStyles"
+            }
+          />
+        </div>
+      </Element>
 
       {/* JENO */}
-      <div
-        className={`${
-          props.isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
-        }`}
-      >
-        <Member
-          slides={props.isDark ? DjenoSlides : jenoSlides}
-          color={
-            props.isDark ? "text-(--color-dark-red)" : "text-(--color-blue)"
-          }
-          scrollColor={
-            props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-blue)"
-          }
-          name={"jeno"}
-          birthday={"April 23 2000"}
-          zodiac={"Taurus"}
-          blood={"O"}
-          IMG={props.isDark ? dm_jenoFull : lm_jenoFull}
-          mobileW={props.isDark ? "w-[300px]" : "w-[350px]"}
-          fullW={props.isDark ? "w-[340px]" : "w-[370px]"}
-          mobileT={
-            props.isDark
-              ? "member_mobileDRedTopRightTriangle"
-              : "member_mobileBlueTopRightTriangle"
-          }
-          triangleStyles={
-            props.windowWidth >= 1280
-              ? props.isDark
-                ? "member_fullDredBottomLeftTriangle XLleftTriangleStyles"
-                : "member_fullBlueBottomLeftTriangle XLleftTriangleStyles"
-              : !props.isDark
-              ? "member_desktopBlueBottomLeftTriangle leftTriangleStyles"
-              : "member_desktopDredBottomLeftTriangle leftTriangleStyles"
-          }
-          nameStyles={
-            props.windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
-          }
-          imgStyles={
-            props.windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"
-          }
-          bioStyles={
-            props.windowWidth >= 1280 ? "XLleftBioStyles" : "leftBioStyles"
-          }
-          blurbStyles={
-            props.windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
-          }
-          scrollStyles={
-            props.windowWidth >= 1280
-              ? "XLleftScrollStyles"
-              : "leftScrollStyles"
-          }
-        />
-      </div>
+      <Element name="jeno">
+        <div
+          className={`${
+            props.isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
+          }`}
+        >
+          <Member
+            slides={props.isDark ? DjenoSlides : jenoSlides}
+            color={
+              props.isDark ? "text-(--color-dark-red)" : "text-(--color-blue)"
+            }
+            scrollColor={
+              props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-blue)"
+            }
+            name={"jeno"}
+            birthday={"April 23 2000"}
+            zodiac={"Taurus"}
+            blood={"O"}
+            IMG={props.isDark ? dm_jenoFull : lm_jenoFull}
+            mobileW={props.isDark ? "w-[300px]" : "w-[350px]"}
+            fullW={props.isDark ? "w-[340px]" : "w-[370px]"}
+            mobileT={
+              props.isDark
+                ? "member_mobileDRedTopRightTriangle"
+                : "member_mobileBlueTopRightTriangle"
+            }
+            triangleStyles={
+              props.windowWidth >= 1280
+                ? props.isDark
+                  ? "member_fullDredBottomLeftTriangle XLleftTriangleStyles"
+                  : "member_fullBlueBottomLeftTriangle XLleftTriangleStyles"
+                : !props.isDark
+                ? "member_desktopBlueBottomLeftTriangle leftTriangleStyles"
+                : "member_desktopDredBottomLeftTriangle leftTriangleStyles"
+            }
+            nameStyles={
+              props.windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
+            }
+            imgStyles={
+              props.windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"
+            }
+            bioStyles={
+              props.windowWidth >= 1280 ? "XLleftBioStyles" : "leftBioStyles"
+            }
+            blurbStyles={
+              props.windowWidth >= 1280
+                ? "XLleftBlurbStyles"
+                : "leftBlurbStyles"
+            }
+            scrollStyles={
+              props.windowWidth >= 1280
+                ? "XLleftScrollStyles"
+                : "leftScrollStyles"
+            }
+          />
+        </div>
+      </Element>
 
       {/* HAECHAN */}
-      <div
-        className={`${
-          props.isDark ? "bg-(--color-blue) text-(--color-white)" : ""
-        }`}
-      >
-        <Member
-          slides={props.isDark ? DhaechanSlides : haechanSlides}
-          color={
-            props.isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"
-          }
-          scrollColor={
-            props.isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
-          }
-          name={"haechan"}
-          birthday={"June 06 2000"}
-          zodiac={"Gemini"}
-          blood={"AB"}
-          IMG={props.isDark ? dm_haechanFull : lm_haechanFull}
-          mobileW={props.isDark ? "w-[300px]" : "w-[315px]"}
-          fullW={props.isDark ? "w-[340px]" : "w-[370px]"}
-          mobileT={"member_mobileYellowTopRightTriangle"}
-          triangleStyles={
-            props.windowWidth >= 1280
-              ? "member_fullYellowTopRightTriangle XLrightTriangleStyles"
-              : "member_desktopYellowTopRightTriangle rightTriangleStyles"
-          }
-          nameStyles={
-            props.windowWidth >= 1280 ? "XLrightNameStyles" : "rightNameStyles"
-          }
-          imgStyles={
-            props.windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
-          }
-          bioStyles={
-            props.windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
-          }
-          blurbStyles={
-            props.windowWidth >= 1280
-              ? "XLrightBlurbStyles"
-              : "rightBlurbStyles"
-          }
-          scrollStyles={
-            props.windowWidth >= 1280
-              ? "XLrightScrollStyles"
-              : "rightScrollStyles"
-          }
-        />
-      </div>
+      <Element name="haechan">
+        <div
+          className={`${
+            props.isDark ? "bg-(--color-blue) text-(--color-white)" : ""
+          }`}
+        >
+          <Member
+            slides={props.isDark ? DhaechanSlides : haechanSlides}
+            color={
+              props.isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"
+            }
+            scrollColor={
+              props.isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
+            }
+            name={"haechan"}
+            birthday={"June 06 2000"}
+            zodiac={"Gemini"}
+            blood={"AB"}
+            IMG={props.isDark ? dm_haechanFull : lm_haechanFull}
+            mobileW={props.isDark ? "w-[300px]" : "w-[315px]"}
+            fullW={props.isDark ? "w-[340px]" : "w-[370px]"}
+            mobileT={"member_mobileYellowTopRightTriangle"}
+            triangleStyles={
+              props.windowWidth >= 1280
+                ? "member_fullYellowTopRightTriangle XLrightTriangleStyles"
+                : "member_desktopYellowTopRightTriangle rightTriangleStyles"
+            }
+            nameStyles={
+              props.windowWidth >= 1280
+                ? "XLrightNameStyles"
+                : "rightNameStyles"
+            }
+            imgStyles={
+              props.windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
+            }
+            bioStyles={
+              props.windowWidth >= 1280 ? "XLrightBioStyles" : "rightBioStyles"
+            }
+            blurbStyles={
+              props.windowWidth >= 1280
+                ? "XLrightBlurbStyles"
+                : "rightBlurbStyles"
+            }
+            scrollStyles={
+              props.windowWidth >= 1280
+                ? "XLrightScrollStyles"
+                : "rightScrollStyles"
+            }
+          />
+        </div>
+      </Element>
 
       {/* JAEMIN */}
-      <div
-        className={`${
-          props.isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
-        }`}
-      >
-        <Member
-          slides={props.isDark ? DjaeminSlides : jaeminSlides}
-          color={props.isDark ? "text-(--color-red)" : "text-(--color-red)"}
-          scrollColor={
-            props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-red)"
-          }
-          name={"jaemin"}
-          birthday={"August 13 2000"}
-          zodiac={"Leo"}
-          blood={"O"}
-          IMG={props.isDark ? dm_jaeminFull : lm_jaeminFull}
-          mobileW={props.isDark ? "w-[300px]" : "w-[320px]"}
-          fullW={props.isDark ? "w-[340px]" : "w-[320px]"}
-          mobileT={"member_mobileRedTopRightTriangle"}
-          triangleStyles={
-            props.windowWidth >= 1280
-              ? "member_fullRedBottomLeftTriangle XLleftTriangleStyles"
-              : "member_desktopRedBottomLeftTriangle leftTriangleStyles"
-          }
-          nameStyles={
-            props.windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
-          }
-          imgStyles={
-            props.windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"
-          }
-          bioStyles={
-            props.windowWidth >= 1280 ? "XLleftBioStyles" : "leftBioStyles"
-          }
-          blurbStyles={
-            props.windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
-          }
-          scrollStyles={
-            props.windowWidth >= 1280
-              ? "XLleftScrollStyles"
-              : "leftScrollStyles"
-          }
-        />
-      </div>
+      <Element name="jaemin">
+        <div
+          className={`${
+            props.isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
+          }`}
+        >
+          <Member
+            slides={props.isDark ? DjaeminSlides : jaeminSlides}
+            color={props.isDark ? "text-(--color-red)" : "text-(--color-red)"}
+            scrollColor={
+              props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-red)"
+            }
+            name={"jaemin"}
+            birthday={"August 13 2000"}
+            zodiac={"Leo"}
+            blood={"O"}
+            IMG={props.isDark ? dm_jaeminFull : lm_jaeminFull}
+            mobileW={props.isDark ? "w-[300px]" : "w-[320px]"}
+            fullW={props.isDark ? "w-[340px]" : "w-[320px]"}
+            mobileT={"member_mobileRedTopRightTriangle"}
+            triangleStyles={
+              props.windowWidth >= 1280
+                ? "member_fullRedBottomLeftTriangle XLleftTriangleStyles"
+                : "member_desktopRedBottomLeftTriangle leftTriangleStyles"
+            }
+            nameStyles={
+              props.windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
+            }
+            imgStyles={
+              props.windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"
+            }
+            bioStyles={
+              props.windowWidth >= 1280 ? "XLleftBioStyles" : "leftBioStyles"
+            }
+            blurbStyles={
+              props.windowWidth >= 1280
+                ? "XLleftBlurbStyles"
+                : "leftBlurbStyles"
+            }
+            scrollStyles={
+              props.windowWidth >= 1280
+                ? "XLleftScrollStyles"
+                : "leftScrollStyles"
+            }
+          />
+        </div>
+      </Element>
 
       {/* CHENLE */}
-      <div
-        className={`${
-          props.isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
-        }`}
-      >
-        <Member
-          slides={props.isDark ? DchenleSlides : chenleSlides}
-          color={
-            props.isDark ? "text-(--color-dark-red)" : "text-(--color-blue)"
-          }
-          scrollColor={
-            props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-blue)"
-          }
-          name={"chenle"}
-          birthday={"November 22 2001"}
-          zodiac={"Sagittarius"}
-          blood={"A"}
-          IMG={props.isDark ? dm_chenleFull : lm_chenleFull}
-          mobileW={props.isDark ? "w-[300px]" : "w-[265px]"}
-          fullW={props.isDark ? "w-[340px]" : "w-[320px]"}
-          mobileT={
-            props.isDark
-              ? "member_mobileDRedTopRightTriangle "
-              : "member_mobileBlueTopRightTriangle"
-          }
-          triangleStyles={
-            props.windowWidth >= 1280
-              ? props.isDark
-                ? "member_fullDRedTopRightTriangle XLrightTriangleStyles"
-                : "member_fullBlueTopRightTriangle XLrightTriangleStyles"
-              : !props.isDark
-              ? "member_desktopBlueTopRightTriangle rightTriangleStyles"
-              : "member_desktopDRedTopRightTriangle rightTriangleStyles"
-          }
-          nameStyles={
-            props.windowWidth >= 1280 ? "XLrightNameStyles" : "rightNameStyles"
-          }
-          imgStyles={
-            props.windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
-          }
-          bioStyles={
-            props.windowWidth >= 1280
-              ? "XLrightBioStyles ml-[0.7em]"
-              : "rightBioStyles ml-[0.7em]"
-          }
-          blurbStyles={
-            props.windowWidth >= 1280
-              ? "XLrightBlurbStyles"
-              : "rightBlurbStyles"
-          }
-          scrollStyles={
-            props.windowWidth >= 1280
-              ? "XLrightScrollStyles"
-              : "rightScrollStyles"
-          }
-        />
-      </div>
+      <Element name="chenle">
+        <div
+          className={`${
+            props.isDark ? "bg-(--color-dark-blue) text-(--color-white)" : ""
+          }`}
+        >
+          <Member
+            slides={props.isDark ? DchenleSlides : chenleSlides}
+            color={
+              props.isDark ? "text-(--color-dark-red)" : "text-(--color-blue)"
+            }
+            scrollColor={
+              props.isDark ? "bg-(--color-member-dark)" : "bg-(--color-blue)"
+            }
+            name={"chenle"}
+            birthday={"November 22 2001"}
+            zodiac={"Sagittarius"}
+            blood={"A"}
+            IMG={props.isDark ? dm_chenleFull : lm_chenleFull}
+            mobileW={props.isDark ? "w-[300px]" : "w-[265px]"}
+            fullW={props.isDark ? "w-[340px]" : "w-[320px]"}
+            mobileT={
+              props.isDark
+                ? "member_mobileDRedTopRightTriangle "
+                : "member_mobileBlueTopRightTriangle"
+            }
+            triangleStyles={
+              props.windowWidth >= 1280
+                ? props.isDark
+                  ? "member_fullDRedTopRightTriangle XLrightTriangleStyles"
+                  : "member_fullBlueTopRightTriangle XLrightTriangleStyles"
+                : !props.isDark
+                ? "member_desktopBlueTopRightTriangle rightTriangleStyles"
+                : "member_desktopDRedTopRightTriangle rightTriangleStyles"
+            }
+            nameStyles={
+              props.windowWidth >= 1280
+                ? "XLrightNameStyles"
+                : "rightNameStyles"
+            }
+            imgStyles={
+              props.windowWidth >= 1280 ? "XLrightImgStyles" : "rightImgStyles"
+            }
+            bioStyles={
+              props.windowWidth >= 1280
+                ? "XLrightBioStyles ml-[0.7em]"
+                : "rightBioStyles ml-[0.7em]"
+            }
+            blurbStyles={
+              props.windowWidth >= 1280
+                ? "XLrightBlurbStyles"
+                : "rightBlurbStyles"
+            }
+            scrollStyles={
+              props.windowWidth >= 1280
+                ? "XLrightScrollStyles"
+                : "rightScrollStyles"
+            }
+          />
+        </div>
+      </Element>
 
       {/* JISUNG */}
-      <div
-        className={`${
-          props.isDark ? "bg-(--color-blue) text-(--color-white)" : ""
-        }`}
-      >
-        <Member
-          slides={props.isDark ? DjisungSlides : jisungSlides}
-          color={
-            props.isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"
-          }
-          scrollColor={
-            props.isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
-          }
-          name={"jisung"}
-          birthday={"February 05 2002"}
-          zodiac={"Aquarius"}
-          blood={"O"}
-          IMG={props.isDark ? dm_jisungFull : lm_jisungFull}
-          mobileW={props.isDark ? "w-[300px]" : "w-[350px]"}
-          fullW={props.isDark ? "w-[340px]" : "w-[350px]"}
-          mobileT={"member_mobileYellowTopRightTriangle"}
-          triangleStyles={
-            props.windowWidth >= 1280
-              ? "member_fullYellowBottomLeftTriangle XLleftTriangleStyles"
-              : "member_desktopYellowBottomLeftTriangle leftTriangleStyles"
-          }
-          nameStyles={
-            props.windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
-          }
-          imgStyles={
-            props.windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"
-          }
-          bioStyles={
-            props.windowWidth >= 1280
-              ? "XLleftBioStyles ml-[1em]"
-              : "leftBioStyles"
-          }
-          blurbStyles={
-            props.windowWidth >= 1280 ? "XLleftBlurbStyles" : "leftBlurbStyles"
-          }
-          scrollStyles={
-            props.windowWidth >= 1280
-              ? "XLleftScrollStyles"
-              : "leftScrollStyles"
-          }
-        />
-      </div>
+      <Element name="jisung">
+        <div
+          className={`${
+            props.isDark ? "bg-(--color-blue) text-(--color-white)" : ""
+          }`}
+        >
+          <Member
+            slides={props.isDark ? DjisungSlides : jisungSlides}
+            color={
+              props.isDark ? "text-(--color-yellow)" : "text-(--color-yellow)"
+            }
+            scrollColor={
+              props.isDark ? "bg-(--color-member-light)" : "bg-(--color-yellow)"
+            }
+            name={"jisung"}
+            birthday={"February 05 2002"}
+            zodiac={"Aquarius"}
+            blood={"O"}
+            IMG={props.isDark ? dm_jisungFull : lm_jisungFull}
+            mobileW={props.isDark ? "w-[300px]" : "w-[350px]"}
+            fullW={props.isDark ? "w-[340px]" : "w-[350px]"}
+            mobileT={"member_mobileYellowTopRightTriangle"}
+            triangleStyles={
+              props.windowWidth >= 1280
+                ? "member_fullYellowBottomLeftTriangle XLleftTriangleStyles"
+                : "member_desktopYellowBottomLeftTriangle leftTriangleStyles"
+            }
+            nameStyles={
+              props.windowWidth >= 1280 ? "XLleftNameStyles" : "leftNameStyles"
+            }
+            imgStyles={
+              props.windowWidth >= 1280 ? "XLleftImgStyles" : "leftImgStyles"
+            }
+            bioStyles={
+              props.windowWidth >= 1280
+                ? "XLleftBioStyles ml-[1em]"
+                : "leftBioStyles"
+            }
+            blurbStyles={
+              props.windowWidth >= 1280
+                ? "XLleftBlurbStyles"
+                : "leftBlurbStyles"
+            }
+            scrollStyles={
+              props.windowWidth >= 1280
+                ? "XLleftScrollStyles"
+                : "leftScrollStyles"
+            }
+          />
+        </div>
+      </Element>
     </>
   );
 };
