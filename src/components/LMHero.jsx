@@ -13,20 +13,12 @@ import { Link } from "react-scroll";
 const LMHero = () => {
   return (
     <>
-      <div className="flex justify-center lg:pb-[38em] xl:pb-[50em]">
+      <div className="flex justify-center sm:pb-[28em] md:pb-[32em] lg:pb-[38em] xl:pb-[50em]">
         <img
           src={lm_Hero}
           alt="group"
           className="sm:absolute z-0 h-[320px] sm:h-[400px] md:h-[475px] lg:h-[550px] xl:h-[750px]"
         />
-
-        {/* className="z-2 relative hover:cursor-pointer
-        hidden sm:block 
-        bg-(--color-red)
-        sm:h-[400px] sm:left-[745px] 
-        md:h-[475px] md:left-[885px]
-        lg:h-[550px] lg:left-[1030px]
-        xl:h-[750px] xl:left-[1394px] xl:hover:scale-[1.05]" */}
 
         <div
           className="z-2 absolute 
@@ -94,9 +86,9 @@ const LMHero = () => {
               src={lm_jaemin}
               alt="jaemin"
               className="z-2 relative hover:cursor-pointer hidden sm:block
-        sm:h-[270px] sm:left-[86px] sm:top-[135px] sm:hover:scale-[1.1]
+        sm:h-[270px] sm:left-[85px] sm:top-[135px] sm:hover:scale-[1.1]
         md:h-[320px] md:left-[104px] md:top-[160px]
-        lg:h-[390px] lg:left-[126px] lg:top-[180px]
+        lg:h-[390px] lg:left-[121px] lg:top-[185px]
         xl:h-[500px] xl:left-[160px] xl:top-[260px]  xl:hover:scale-[1.05]"
             />
           </Link>
@@ -119,9 +111,9 @@ const LMHero = () => {
               src={lm_jeno}
               alt="jeno"
               className="z-3 relative hover:cursor-pointer hidden sm:block
-            sm:h-[400px] sm:left-[35px] sm:hover:scale-[1.1]
-        md:h-[475px] md:left-[42px]
-        lg:h-[550px] lg:left-[40px]
+            sm:h-[400px] sm:left-[13px] sm:hover:scale-[1.1]
+        md:h-[475px] md:left-[14px]
+        lg:h-[550px] lg:left-[16px]
         xl:h-[750px] xl:left-[23px]  xl:hover:scale-[1.05]"
             />
           </Link>
@@ -144,9 +136,9 @@ const LMHero = () => {
               src={lm_haechan}
               alt="haechan"
               className="z-2 relative hover:cursor-pointer hidden sm:block 
-              sm:h-[400px] sm:left-[-215px] sm:hover:scale-[1.1]
-              md:h-[475px] md:left-[-255px]
-              lg:h-[550px] lg:left-[-303px]
+              sm:h-[400px] sm:left-[-95px] sm:hover:scale-[1.1]
+              md:h-[475px] md:left-[-112px]
+              lg:h-[550px] lg:left-[-130px]
               xl:h-[750px] xl:left-[-177px]  xl:hover:scale-[1.05]"
             />
           </Link>
@@ -169,9 +161,9 @@ const LMHero = () => {
               src={lm_mark}
               alt="mark"
               className="z-1 relative hover:cursor-pointer hidden sm:block 
-              sm:h-[400px] sm:left-[-117px] sm:hover:scale-[1.1]
-              md:h-[475px] md:left-[-138px]
-              lg:h-[550px] lg:left-[-161px]
+              sm:h-[400px] sm:left-[-160px] sm:hover:scale-[1.1]
+              md:h-[475px] md:left-[-191px] md:top-[3px]
+              lg:h-[550px] lg:left-[-220px] lg:top-[3px]
               xl:h-[750px] xl:left-[-300px]  xl:hover:scale-[1.05]"
             />
           </Link>
