@@ -157,27 +157,56 @@ const Socials = (props) => {
           </p>
 
           <div className="w-full flex flex-col justify-center items-center pt-[2em]">
-            <Social
-              icon={<FiTwitter />}
-              name={"Twitter"}
-              isDark={props.isDark}
-            />
-            <Social
-              icon={<FiInstagram />}
-              name={"Instagram"}
-              isDark={props.isDark}
-            />
-            <Social icon={<FaTiktok />} name={"TikTok"} isDark={props.isDark} />
-            <Social
-              icon={<FaSpotify />}
-              name={"Spotify"}
-              isDark={props.isDark}
-            />
-            <Social
-              icon={<FiYoutube />}
-              name={"YouTube"}
-              isDark={props.isDark}
-            />
+            <a target="_blank" href="https://x.com/NCTsmtown_DREAM">
+              <Social
+                icon={<FiTwitter />}
+                name={"Twitter"}
+                isDark={props.isDark}
+              />
+            </a>
+
+            <a
+              target="_blank"
+              href="https://www.instagram.com/nct_dream/?hl=en"
+            >
+              <Social
+                icon={<FiInstagram />}
+                name={"Instagram"}
+                isDark={props.isDark}
+              />
+            </a>
+
+            <a
+              target="_blank"
+              href="https://www.tiktok.com/@official_nct?lang=en"
+            >
+              <Social
+                icon={<FaTiktok />}
+                name={"TikTok"}
+                isDark={props.isDark}
+              />
+            </a>
+
+            <a
+              target="_blank"
+              href="https://open.spotify.com/artist/1gBUSTR3TyDdTVFIaQnc02"
+            >
+              <Social
+                icon={<FaSpotify />}
+                name={"Spotify"}
+                isDark={props.isDark}
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCXURHJRGr4-EB3l87kcbElw"
+            >
+              <Social
+                icon={<FiYoutube />}
+                name={"YouTube"}
+                isDark={props.isDark}
+              />
+            </a>
           </div>
           {photocards.map((pc) => (
             <Draggable
