@@ -174,7 +174,7 @@ const Albums = (props) => {
   return (
     <div
       className={`slider-container w-[89%] 
-        m-auto pb-[3em] pt-[1em] ${
+        m-auto pb-[5em] pt-[3em] ${
           props.isDark ? "bg-(--color-dark-blue)" : "bg-(--color-white)"
         } `}
     >

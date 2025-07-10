@@ -13,7 +13,7 @@ import { Link } from "react-scroll";
 const LMHero = () => {
   return (
     <>
-      <div className="flex justify-center sm:pb-[28em] md:pb-[32em] lg:pb-[38em] xl:pb-[50em]">
+      <div className="flex justify-center sm:pb-[28em] md:pb-[32em] lg:pb-[35em] xl:pb-[47em]">
         <img
           src={lm_Hero}
           alt="group"

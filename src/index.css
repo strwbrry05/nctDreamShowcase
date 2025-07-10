@@ -31,6 +31,10 @@
 /*################
   NAVIGATION
 ###################*/
+
+
+
+/* nav */
 .barDarkMode {
   background: var(--color-blue);
 }
@@ -48,6 +52,7 @@
   color: var(--color-black);
 }
 
+
 .navBarListItem {
   cursor: pointer;
   margin-bottom: 1em;
@@ -60,13 +65,28 @@
 .darkModeNavBarListItem {
   color: var(--color-gray);
 }
-.darkModeNavBarListItem:hover {
-  color: var(--color-white);
-}
+
 .lightModeNavBarListItem {
   color: var(--color-dark-gray);
 }
+
+
+.darkModeNavBarListItem:hover {
+  color: var(--color-white);
+}
 .lightModeNavBarListItem:hover {
+  color: var(--color-black);
+}
+
+
+/* active nav and inactive */
+.active {
+  color: var(--color-white);
+  font-weight: bold;
+
+}
+
+.activeHome {
   color: var(--color-black);
 }
 

@@ -66,7 +66,7 @@ const Member = (props) => {
             {props.name}
           </h2>
           <motion.img
-            initial={{ x: -500, opacity: 0 }}
+            initial={{ x: -400, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             whileHover={{ scale: 1.15 }}
             viewport={{ once: true }}

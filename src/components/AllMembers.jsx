@@ -544,7 +544,7 @@ const AllMembers = (props) => {
         <div
           className={`${
             props.isDark ? "bg-(--color-blue) text-(--color-white)" : ""
-          }`}
+          } `}
         >
           <Member
             slides={props.isDark ? DjisungSlides : jisungSlides}
