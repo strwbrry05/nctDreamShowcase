@@ -1,5 +1,5 @@
 # nctDream showcase
-[2025]
+[2025] React web app showcasing the kpop group NCT Dream. 
 
 ![Home](nctDream_files/projectDay.gif)
 ![Home](nctDream_files/projectNight.gif)
@@ -74,6 +74,15 @@ Designed desktop first, developed mobile first. Some features are not available 
 </span>
 
 ## Potential Improvements
+- NAV: The nav bar and the toggle 'day-night' button are not centered.
+  
+- HERO: When hovering over members, some of the pop-ups are not accurate. Correcting this process and perhaps adding a label whislt hovering over the members would make this a more user friendly feature.
+
+- MEMBERS: For the additional images slideshow. If a user wanted to look at an image closer, allow the image to enlarge and block out the rest of the page with a screen. Perhaps allowing the user to download the image they clicked on or move between the rest of the slideshow images.
+  
+- ALBUMS: If an album is selected, a snippet of music plays from their title track off that album. Would also include links to spotify and apple music if the user were interested in listening to the full album.
+
+- MVs: Somehow allow for the automatic playing of videos. Perhaps even going as far as playing the music unmuted for the user when they load the page for the first time. Of course, a mute button would be present on screen at all times for those who don't wish to listen to the music while they explore the page.
 
 ## Built Using
 - HTML
