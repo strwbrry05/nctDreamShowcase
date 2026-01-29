@@ -1,18 +1,72 @@
-# NCT DREAM SHOWCASE
+# nctDream showcase
+[2025]
 
-Website created in order to showcase the KPOP group NCT DREAM. Skills worked on thorughout the course of this porject include but are not limited to, React Hooks (useState, useEffect, useRef), working with and calling an external API (
+![Home](nctDream_files/projectDay.gif)
+![Home](nctDream_files/projectNight.gif)
 
-## DEMO
 
-##
+## About the Project
+### Nav + Footer
+<img src="nctDream_files/day_nav.png" width="650"/>
+<img src="nctDream_files/night_nav.png" width="650"/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br/>
 
-Currently, two official plugins are available:
+<img src="nctDream_files/day_footer.png" width="650"/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Hero
+<img src="nctDream_files/about_day_home.png" width="650"/>
+<img src="nctDream_files/about_night_home.png" width="650"/>
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Member Information
+<img src="nctDream_files/about_m1.png" width="650"/>
+<img src="nctDream_files/about_m2.png" width="650"/>
+<img src="nctDream_files/about_m3.png" width="650"/>
+<img src="nctDream_files/about_m4.png" width="650"/>
+<img src="nctDream_files/about_m5.png" width="650"/>
+<img src="nctDream_files/about_m6.png" width="650"/>
+<img src="nctDream_files/about_m7.png" width="650"/>
+
+
+### Albums
+<img src="nctDream_files/day_albums.png" width="650"/>
+<img src="nctDream_files/night_albums.png" width="650"/>
+
+### FAQ
+<img src="nctDream_files/day_faq.png" width="650"/>
+<img src="nctDream_files/night_faq.png" width="650"/>
+
+### Socials
+<img src="nctDream_files/day_cards.png" width="650"/>
+<img src="nctDream_files/day_cards_moved.png" width="650"/>
+
+<img src="nctDream_files/night_cards.png" width="650"/>
+<img src="nctDream_files/night_cards_moved.png" width="650"/>
+
+### MVs
+<img src="nctDream_files/day_mv.png" width="650"/>
+<img src="nctDream_files/night_mv.png" width="650"/>
+
+## Responsive View
+<span>
+<img src="nctDream_files/mobile_home.png" width="250"/>
+<img src="nctDream_files/mobile_nav.png" width="250"/>
+<img src="nctDream_files/mobile_m.png" width="250"/>
+<img src="nctDream_files/mobile_faq.png" width="250"/>
+</span>
+
+## Potential Improvements
+
+## Built Using
+- HTML
+- CSS
+- Tailwind CSS
+- VSCode
+- React + Vite
+- NodeJS
+
+## Contact
+Any comments, questions, or concerns?\
+Contact Jacqueline Molina: molina.jq19@gmail.com
+
