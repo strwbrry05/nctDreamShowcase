@@ -1,11 +1,13 @@
 # nctDream showcase
-[2025] React web app showcasing the kpop group NCT Dream. 
+[2025] React web app showcasing the kpop group NCT Dream. Inlcudes many interesting and distinct features such as 'day-and-night' mode, slideshows, carousels, drag-and-drop components, and many more. Primarily desktop focused, page is still responsive and does shrink down to its own mobile view.
 
 ![Home](nctDream_files/projectDay.gif)
 ![Home](nctDream_files/projectNight.gif)
 
 
 ## About the Project
+When designing and developing I find that the projects where I shine the most are those that are directly connected to my interests and hobbies. I found NCT Dream exactly when they debuted and have loved listening to their music ever since. While I have slightly outgrown them, I still find myself thinking back to that time with lots of nostalgia and love. This idea had been on my mind now for a couple of years, but I had never dared to do anything about it. While challenging, my love for this project allowed me to test new boundaries and features I had never attempted before. Incredibly fun project, I learned so so much.
+
 ### Nav + Footer
 Interesting feature about the nav is that at the start, it remains one color but once you scroll, it turns black and sticks to the top of the window. This was inspired by the Netflix nav which acts in a somewhat similar way.
 
